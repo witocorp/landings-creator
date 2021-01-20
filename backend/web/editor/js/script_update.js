@@ -506,7 +506,7 @@ $(document).ready(function () {
   $("#save_image").on("submit", function (e) {
     e.preventDefault();
     $.ajax({
-      url: "http://landings.sitioenlinea.es/upload.php",
+      url: "https://landingfy-creator.com/upload.php",
       type: "POST",
       data: new FormData(this),
       contentType: false,

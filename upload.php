@@ -16,7 +16,7 @@ if($_FILES['image'])
 		$path = $path.strtolower($final_image); 
 		if(move_uploaded_file($tmp,$path)) 
 		{
-			echo "http://".$_SERVER['SERVER_NAME']."/".$path;
+			echo "https://".$_SERVER['SERVER_NAME']."/".$path;
 			
 		}else {
 			echo 'error';
