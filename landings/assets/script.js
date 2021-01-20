@@ -14,7 +14,7 @@ $(document).ready(function(){
 		var flag = 0;
 		var options = "";	
 		$("input[type=radio]:checked").each(function() {
-			options = options+"<br>"+this.name+" : "+this.value;  
+			options = options+this.name+" : "+this.value+",";  
 		});
 		if(!$('#nombre_form').val()){
 			$('#nombre_form').addClass('border-danger');
