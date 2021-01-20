@@ -9,6 +9,10 @@
   font-size: 20px;
   font-weight: 900;
 }
+.banner_head a {
+    text-decoration: none;
+    color: #fff;
+}
 .banner_head p{
   margin: 0;    
 }

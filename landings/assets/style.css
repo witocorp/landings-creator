@@ -7,6 +7,10 @@
 #editH nav{
   padding: 5px 20px;
 }
+.banner_head a {
+    text-decoration: none;
+    color: #fff;
+}
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: 700;
