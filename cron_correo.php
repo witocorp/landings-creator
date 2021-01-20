@@ -1,7 +1,7 @@
 <?php
-$servername = "db5001390736.hosting-data.io";
-$username = "dbu420805";
-$password = "Landing2020!";
+$servername = "localhost";
+$username = "root";
+$password = "#Valvarez@2019?.";
 $dbname = "dbs1175525";
 
 // Create connection
