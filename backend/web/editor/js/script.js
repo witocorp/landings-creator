@@ -460,7 +460,9 @@ $(document).ready(function () {
       $('#titleOptions').val('');
   });
   $(document).on("click", "#addOption", function () {
-      $('#addtoform').append('<input type="radio" name="'+$('#newOption').val()+'" value="'+$('#newValue').val()+'">'+$('#newValue').val());
+      $('#addtoform').append('<div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="'+
+      	$('#newOption').val()+'" value="'+$('#newValue').val()+'">'+
+      	'<label class="form-check-label">'+$('#newValue').val()+'</label></div>');
       $('#newOption').val('');
       $('#newValue').val('');
   });
@@ -495,7 +497,7 @@ $(document).ready(function () {
   $("#save_image").on("submit", function (e) {
     e.preventDefault();
     $.ajax({
-      url: "https://landingfy-creator.com/upload.php",
+      url: "http://landings.sitioenlinea.es/upload.php",
       type: "POST",
       data: new FormData(this),
       contentType: false,
