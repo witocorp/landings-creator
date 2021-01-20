@@ -51,7 +51,8 @@ class EmailsController extends Controller
     public function actionIndex()
     {
         $landing = Yii::$app->request->get('id');
-        $searchModel = new EmailsSearch(['idLanding' => $landing,]);
+        echo $landing;
+        /*$searchModel = new EmailsSearch(['idLanding' => $landing,]);
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 		$searchLanding = new LandingSearch(['id' => $landing,]);
 		$LandingProvider = $searchLanding->search(Yii::$app->request->queryParams);
@@ -70,7 +71,7 @@ class EmailsController extends Controller
 			'nombre' => $nombre,
             'email' => $email,
             'carbon' => $carbon,
-        ]);
+        ]);*/
     }
 
     /**
