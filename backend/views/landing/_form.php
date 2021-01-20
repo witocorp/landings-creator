@@ -281,7 +281,7 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
                               <input id="nacimiento_form" type="date" class="form-control" placeholder="Birthdate"> 
                             </div> 
                           </div> 
-                          <div id="addtoform" class="row mt-4"></div>
+                          <div id="addtoform" class="mt-4"></div>
                           <div class="row mt-4"> 
                             <div class="col text-center"> 
                               <button id="enviar_form" type="submit" class="btn btn-primary">Submit</button> 
