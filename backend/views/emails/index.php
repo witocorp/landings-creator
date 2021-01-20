@@ -64,11 +64,11 @@ $this->title = $nombre;
               position: "none"
             },
           };
-          var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_<?php echo $idD; ?>"));
+          var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_show"));
           chart.draw(view, options);
         }
       </script>
-      <div id="columnchart_<?php echo $idD; ?>" style="width: 100%;"></div>
+      <div id="columnchart_show" style="width: 100%;"></div>
     </div>
   </div>
   <div class="row my-5">
