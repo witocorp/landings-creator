@@ -24,20 +24,32 @@ if ($result->num_rows > 0) {
  while($row = $result->fetch_assoc()) {
     if($row["idLanding"] === "0"){
       $emailAdmin = $row["email"];
-      $emailCarbon = $row["carbon"];  
+      $emailCarbon = $row["carbon"]; 
+      $dominio = ""; 
       $sql2 = "SELECT * FROM emails";
       $result2 = $conn->query($sql2);
       while($row2 = $result2->fetch_assoc()) {
-          $attachment  .= $row2["nombre"]."\t".$row2["apellido"]."\t".$row2["telefono"]."\t".$row2["email"]."\t".$row2["direccion"]."\t".$row2["idLanding"]."\t".$row2["fecha"]."\t".$row2["fnacimiento"]."\t".$row2["opciones"]."\t\n";
+          $sqlNl = "SELECT * FROM landing WHERE id = ".$row2["idLanding"];
+          $rNl = $conn->query($sqlNl);
+          while($rowNl = $rNl->fetch_assoc()) {
+              $dominio = $rowNl["dominio"];
+          }
+          $attachment  .= $row2["nombre"]."\t".$row2["apellido"]."\t".$row2["telefono"]."\t".$row2["email"]."\t".$row2["direccion"]."\t".$dominio."\t".$row2["fecha"]."\t".$row2["fnacimiento"]."\t".$row2["opciones"]."\t\n";
       } 
     }else{
       $attachment2  = '';
+      $dominio = ""; 
       $emailL = $row["email"];
       $emailLc = $row["carbon"];
       $sql3 = "SELECT * FROM emails WHERE idLanding = ".$row["idLanding"];
       $result3 = $conn->query($sql3);
       while($row3 = $result3->fetch_assoc()) {
-          $attachment2  .= $row3["nombre"]."\t".$row3["apellido"]."\t".$row3["telefono"]."\t".$row3["email"]."\t".$row3["direccion"]."\t".$row3["idLanding"]."\t".$row3["fecha"]."\t".$row3["fnacimiento"]."\t".$row3["opciones"]."\t\n";
+          $sqlNl = "SELECT * FROM landing WHERE id = ".$row3["idLanding"];
+          $rNl = $conn->query($sqlNl);
+          while($rowNl = $rNl->fetch_assoc()) {
+              $dominio = $rowNl["dominio"];
+          }
+          $attachment2  .= $row3["nombre"]."\t".$row3["apellido"]."\t".$row3["telefono"]."\t".$row3["email"]."\t".$row3["direccion"]."\t".$dominio."\t".$row3["fecha"]."\t".$row3["fnacimiento"]."\t".$row3["opciones"]."\t\n";
       }
       $mail = new PHPMailer\PHPMailer\PHPMailer();
       $mail->IsSMTP(); // enable SMTP
