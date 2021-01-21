@@ -29,7 +29,6 @@ if ($result->num_rows > 0) {
       $result2 = $conn->query($sql2);
       while($row2 = $result2->fetch_assoc()) {
           $attachment  .= $row2["nombre"]."\t".$row2["apellido"]."\t".$row2["telefono"]."\t".$row2["email"]."\t".$row2["direccion"]."\t".$row2["idLanding"]."\t".$row2["fecha"]."\t".$row2["fnacimiento"]."\t".$row2["opciones"]."\t\n";
-          echo  $attachment."-<br>";
       } 
     }else{
       $emailL = $row["email"];
@@ -39,7 +38,27 @@ if ($result->num_rows > 0) {
       while($row3 = $result3->fetch_assoc()) {
           $attachment2  .= $row3["nombre"]."\t".$row3["apellido"]."\t".$row3["telefono"]."\t".$row3["email"]."\t".$row3["direccion"]."\t".$row3["idLanding"]."\t".$row3["fecha"]."\t".$row3["fnacimiento"]."\t".$row3["opciones"]."\t\n";
       }
-      echo  $attachment2."<br>";
+      $mail = new PHPMailer\PHPMailer\PHPMailer();
+      $mail->IsSMTP(); // enable SMTP
+      $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+      $mail->SMTPAuth = true; // authentication enabled
+      $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+      $mail->Host = "smtp.gmail.com";
+      $mail->Port = 465; // or 587
+      $mail->IsHTML(true);
+      $mail->Username = "fantasticfy@gmail.com";
+      $mail->Password = "46Wito74.";
+      $mail->SetFrom("noreply@landingfy-creator.com");
+      $mail->AddStringAttachment($attachment2, 'landing_emails.xls', 'base64', 'application/vnd.ms-excel');
+      $mail->Subject = "Emails list";
+      $mail->Body = "Emails list";
+      $mail->AddAddress($emailL);
+      $mail->addCC($emailLc);
+       if(!$mail->Send()) {
+          echo "Mailer Error: " . $mail->ErrorInfo;
+       } else {
+          echo "Message has been sent";
+       }
     }
       
       
@@ -48,7 +67,6 @@ if ($result->num_rows > 0) {
   echo "0 results";
 }
 $conn->close();
-/*
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 $mail->IsSMTP(); // enable SMTP
 $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
@@ -69,5 +87,5 @@ $mail->addCC($emailCarbon);
     echo "Mailer Error: " . $mail->ErrorInfo;
  } else {
     echo "Message has been sent";
- }*/
+ }
 ?>
