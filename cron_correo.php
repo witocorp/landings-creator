@@ -14,6 +14,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 $attachment  = '';
+$attachment2  = '';
 $sql = "SELECT * FROM email";
 $result = $conn->query($sql);
 $emailAdmin = "";
@@ -25,17 +26,29 @@ if ($result->num_rows > 0) {
       $emailAdmin = $row["email"];
       $emailCarbon = $row["carbon"];  
       $sql2 = "SELECT * FROM emails";
-    $result2 = $conn->query($sql2);
-    while($row2 = $result2->fetch_assoc()) {
-        $attachment  .= $row2["nombre"]."\t".$row2["apellido"]."\t".$row2["telefono"]."\t\n";
+      $result2 = $conn->query($sql2);
+      while($row2 = $result2->fetch_assoc()) {
+          $attachment  .= $row2["nombre"]."\t".$row2["apellido"]."\t".$row2["telefono"]."\t".$row2["email"]."\t".$row2["direccion"]."\t".$row2["idLanding"]."\t".$row2["fecha"]."\t".$row2["fnacimiento"]."\t".$row2["opciones"]."\t\n";
+          echo  $attachment."-<br>";
+      } 
+    }else{
+      $emailL = $row["email"];
+      $emailLc = $row["carbon"];
+      $sql3 = "SELECT * FROM emails WHERE idLanding = ".$row["idLanding"];
+      $result3 = $conn->query($sql3);
+      while($row3 = $result3->fetch_assoc()) {
+          $attachment2  .= $row3["nombre"]."\t".$row3["apellido"]."\t".$row3["telefono"]."\t".$row3["email"]."\t".$row3["direccion"]."\t".$row3["idLanding"]."\t".$row3["fecha"]."\t".$row3["fnacimiento"]."\t".$row3["opciones"]."\t\n";
+      }
+      echo  $attachment2."<br>";
     }
-    }
+      
+      
   }
 } else {
   echo "0 results";
 }
 $conn->close();
-
+/*
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 $mail->IsSMTP(); // enable SMTP
 $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
@@ -47,7 +60,7 @@ $mail->IsHTML(true);
 $mail->Username = "fantasticfy@gmail.com";
 $mail->Password = "46Wito74.";
 $mail->SetFrom("noreply@landingfy-creator.com");
-$mail->AddStringAttachment($attachment, 'your-csv-file.xls', 'base64', 'application/vnd.ms-excel');
+$mail->AddStringAttachment($attachment, 'emails_list.xls', 'base64', 'application/vnd.ms-excel');
 $mail->Subject = "Emails list";
 $mail->Body = "Emails list";
 $mail->AddAddress($emailAdmin);
@@ -56,7 +69,5 @@ $mail->addCC($emailCarbon);
     echo "Mailer Error: " . $mail->ErrorInfo;
  } else {
     echo "Message has been sent";
- }
-
-
+ }*/
 ?>
