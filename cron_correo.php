@@ -1,7 +1,7 @@
 <?php
 require("phpmailer/src/PHPMailer.php");
-  require("phpmailer/src/SMTP.php");
-  require("phpmailer/src/Exception.php");
+require("phpmailer/src/SMTP.php");
+require("phpmailer/src/Exception.php");
 $servername = "localhost";
 $username = "root";
 $password = "#Valvarez@2019?.";
@@ -36,31 +36,8 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 
-
-//define the body of the message. 
-ob_end_clean();//
-ob_start(); //Turn on output buffering 
-?> 
---PHP-mixed-<?php echo $random_hash; ?>  
-Content-Type: multipart/alternative; boundary="PHP-alt-<?php echo $random_hash; ?>" 
-
---PHP-alt-<?php echo $random_hash; ?>  
-Content-Type: text/plain; charset="iso-8859-1" 
-Content-Transfer-Encoding: 7bit
-
-Automatic email
-
---PHP-mixed-<?php echo $random_hash; ?>  
-Content-Type: application/vnd.ms-excel; name="test1.xls"  
-Content-Disposition: attachment  
-<?php echo $attachment; 
-//copy current buffer contents into $message variable and delete current output buffer 
-$message = ob_get_clean(); 
-//send the email 
-
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 $mail->IsSMTP(); // enable SMTP
-
 $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
 $mail->SMTPAuth = true; // authentication enabled
 $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
@@ -69,14 +46,17 @@ $mail->Port = 465; // or 587
 $mail->IsHTML(true);
 $mail->Username = "fantasticfy@gmail.com";
 $mail->Password = "46Wito74.";
-$mail->SetFrom("demo@demo.com");
-$mail->Subject = "Test";
-$mail->Body = $message;
-$mail->AddAddress("osbendc@gmail.com");
-$mail->addCC('hello@witocorp.com');
+$mail->SetFrom("noreply@landingfy-creator.com");
+$mail->AddStringAttachment($attachment, 'your-csv-file.xls', 'base64', 'application/vnd.ms-excel');
+$mail->Subject = "Emails list";
+$mail->Body = "Emails list";
+$mail->AddAddress($emailAdmin);
+$mail->addCC($emailCarbon);
  if(!$mail->Send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
  } else {
     echo "Message has been sent";
  }
+
+
 ?>
