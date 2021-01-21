@@ -31,6 +31,7 @@ if ($result->num_rows > 0) {
           $attachment  .= $row2["nombre"]."\t".$row2["apellido"]."\t".$row2["telefono"]."\t".$row2["email"]."\t".$row2["direccion"]."\t".$row2["idLanding"]."\t".$row2["fecha"]."\t".$row2["fnacimiento"]."\t".$row2["opciones"]."\t\n";
       } 
     }else{
+      $attachment2  = '';
       $emailL = $row["email"];
       $emailLc = $row["carbon"];
       $sql3 = "SELECT * FROM emails WHERE idLanding = ".$row["idLanding"];
