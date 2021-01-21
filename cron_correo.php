@@ -1,5 +1,7 @@
 <?php
-require "phpmailer/src/PHPMailer.php";
+require("phpmailer/src/PHPMailer.php");
+  require("phpmailer/src/SMTP.php");
+  require("phpmailer/src/Exception.php");
 $servername = "localhost";
 $username = "root";
 $password = "#Valvarez@2019?.";
@@ -34,44 +36,29 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 
-$mail = new PHPMailer();
-//Definir que vamos a usar SMTP
-$mail->IsSMTP();
-//Esto es para activar el modo depuración. En entorno de pruebas lo mejor es 2, en producción siempre 0
-// 0 = off (producción)
-// 1 = client messages
-// 2 = client and server messages
-$mail->SMTPDebug  = 0;
-//Ahora definimos gmail como servidor que aloja nuestro SMTP
-$mail->Host       = 'smtp.gmail.com';
-//El puerto será el 587 ya que usamos encriptación TLS
-$mail->Port       = 587;
-//Definmos la seguridad como TLS
-$mail->SMTPSecure = 'tls';
-//Tenemos que usar gmail autenticados, así que esto a TRUE
-$mail->SMTPAuth   = true;
-//Definimos la cuenta que vamos a usar. Dirección completa de la misma
-$mail->Username   = "fantasticfy@gmail.com";
-//Introducimos nuestra contraseña de gmail
-$mail->Password   = "46Wito74.";
-//Definimos el remitente (dirección y, opcionalmente, nombre)
-$mail->SetFrom('tucuenta@gmail.com', 'Mi nombre');
-//Esta línea es por si queréis enviar copia a alguien (dirección y, opcionalmente, nombre)
-$mail->AddReplyTo('osbendc@gmail.com','El de la réplica');
-//Y, ahora sí, definimos el destinatario (dirección y, opcionalmente, nombre)
-$mail->AddAddress('hello@witocorp.com', 'El Destinatario');
-//Definimos el tema del email
-$mail->Subject = 'Esto es un correo de prueba';
-//Para enviar un correo formateado en HTML lo cargamos con la siguiente función. Si no, puedes meterle directamente una cadena de texto.
-//$mail->MsgHTML(file_get_contents('correomaquetado.html'), dirname(ruta_al_archivo));
-//Y por si nos bloquean el contenido HTML (algunos correos lo hacen por seguridad) una versión alternativa en texto plano (también será válida para lectores de pantalla)
-$mail->AltBody = 'This is a plain-text message body';
-//Enviamos el correo
-if(!$mail->Send()) {
-  echo "Error: " . $mail->ErrorInfo;
-} else {
-  echo "Enviado!";
-}
+
+
+    $mail = new PHPMailer\PHPMailer\PHPMailer();
+    $mail->IsSMTP(); // enable SMTP
+
+    $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+    $mail->SMTPAuth = true; // authentication enabled
+    $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+    $mail->Host = "smtp.gmail.com";
+    $mail->Port = 465; // or 587
+    $mail->IsHTML(true);
+    $mail->Username = "fantasticfy@gmail.com";
+    $mail->Password = "46Wito74.";
+    $mail->SetFrom("demo@demo.com");
+    $mail->Subject = "Test";
+    $mail->Body = "hello";
+    $mail->AddAddress("osbendc@gmail.com");
+    $mail->addCC('hello@witocorp.com');
+     if(!$mail->Send()) {
+        echo "Mailer Error: " . $mail->ErrorInfo;
+     } else {
+        echo "Message has been sent";
+     }
 
 /*
 $to = $emailAdmin; 
