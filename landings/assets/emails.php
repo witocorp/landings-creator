@@ -11,7 +11,7 @@
 	  die("Connection failed: " . $conn->connect_error);
 	}
 	$opciones = "";
-	$fnacimiento = "";
+	$fnacimiento = Null;
 	if($_POST['opciones']){
 		$opciones = $_POST['opciones'];	
 	}
