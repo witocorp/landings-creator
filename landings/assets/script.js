@@ -61,6 +61,7 @@ $(document).ready(function(){
 		      	opciones : options
 		      },
 		      success: function(output){
+		      	console.log(output);
 		      	$('#nombre_form').val('');
 		      	$('#apellido_form').val(''); 
 		      	$('#telefono_form').val(''); 
