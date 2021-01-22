@@ -43,12 +43,10 @@ if ($result->num_rows > 0) {
       $emailLc = $row["carbon"];
       $sql3 = "SELECT * FROM emails WHERE idLanding = ".$row["idLanding"]." AND fecha = '".date("Y-m-j", strtotime( '-1 days' ) )."'";
       $result3 = $conn->query($sql3);
+      $sqlNl = "SELECT dominio FROM landing WHERE id = ".$row["idLanding"];
+      $dominio = $sqlNL;
       while($row3 = $result3->fetch_assoc()) {
-          $sqlNl = "SELECT * FROM landing WHERE id = ".$row3["idLanding"];
           $rNl = $conn->query($sqlNl);
-          while($rowNl = $rNl->fetch_assoc()) {
-              $dominio = $rowNl["dominio"];
-          }
           $attachment2  .= $row3["nombre"]."\t".$row3["apellido"]."\t".$row3["telefono"]."\t".$row3["email"]."\t".$row3["direccion"]."\t".$dominio."\t".$row3["fecha"]."\t".$row3["fnacimiento"]."\t".$row3["opciones"]."\t\n";
       }
       if($attachment2  !== ''){
