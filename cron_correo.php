@@ -51,7 +51,7 @@ if ($result->num_rows > 0) {
           }
           $attachment2  .= $row3["nombre"]."\t".$row3["apellido"]."\t".$row3["telefono"]."\t".$row3["email"]."\t".$row3["direccion"]."\t".$dominio."\t".$row3["fecha"]."\t".$row3["fnacimiento"]."\t".$row3["opciones"]."\t\n";
       }
-      $mail = new PHPMailer\PHPMailer\PHPMailer();
+      /*$mail = new PHPMailer\PHPMailer\PHPMailer();
       $mail->IsSMTP(); // enable SMTP
       $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
       $mail->SMTPAuth = true; // authentication enabled
@@ -71,7 +71,8 @@ if ($result->num_rows > 0) {
           echo "Mailer Error: " . $mail->ErrorInfo;
        } else {
           echo "Message has been sent";
-       }
+       }*/
+       echo $attachment2."<br>";
     }
       
       
@@ -80,7 +81,8 @@ if ($result->num_rows > 0) {
   echo "0 results";
 }
 $conn->close();
-$mail = new PHPMailer\PHPMailer\PHPMailer();
+echo $attachment;
+/*$mail = new PHPMailer\PHPMailer\PHPMailer();
 $mail->IsSMTP(); // enable SMTP
 $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
 $mail->SMTPAuth = true; // authentication enabled
@@ -100,5 +102,5 @@ $mail->addCC($emailCarbon);
     echo "Mailer Error: " . $mail->ErrorInfo;
  } else {
     echo "Message has been sent";
- }
+ }*/
 ?>
