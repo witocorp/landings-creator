@@ -26,10 +26,10 @@ if ($result->num_rows > 0) {
       $emailAdmin = $row["email"];
       $emailCarbon = $row["carbon"]; 
       $dominio = ""; 
-      $sql2 = "SELECT * FROM emails";
+      $sql2 = "SELECT * FROM emails WHERE fecha = '".date("Y-m-j", strtotime( '-1 days' ) )."'";
       $result2 = $conn->query($sql2);
       while($row2 = $result2->fetch_assoc()) {
-          $sqlNl = "SELECT * FROM landing WHERE id = ".$row2["idLanding"]." AND fecha = '".date("Y-m-j", strtotime( '-1 days' ) )."'";
+          $sqlNl = "SELECT * FROM landing WHERE id = ".$row2["idLanding"];
           echo $sqlNl."<br>";
           $rNl = $conn->query($sqlNl);
           while($rowNl = $rNl->fetch_assoc()) {
@@ -42,10 +42,10 @@ if ($result->num_rows > 0) {
       $dominio = ""; 
       $emailL = $row["email"];
       $emailLc = $row["carbon"];
-      $sql3 = "SELECT * FROM emails WHERE idLanding = ".$row["idLanding"];
+      $sql3 = "SELECT * FROM emails WHERE idLanding = ".$row["idLanding"]." AND fecha = '".date("Y-m-j", strtotime( '-1 days' ) )."'";
       $result3 = $conn->query($sql3);
       while($row3 = $result3->fetch_assoc()) {
-          $sqlNl = "SELECT * FROM landing WHERE id = ".$row3["idLanding"]." AND fecha = '".date("Y-m-j", strtotime( '-1 days' ) )."'";
+          $sqlNl = "SELECT * FROM landing WHERE id = ".$row3["idLanding"];
           echo $sqlNl."<br>";
           $rNl = $conn->query($sqlNl);
           while($rowNl = $rNl->fetch_assoc()) {
