@@ -44,7 +44,7 @@ if ($result->num_rows > 0) {
       $sql3 = "SELECT * FROM emails WHERE idLanding = ".$row["idLanding"];
       $result3 = $conn->query($sql3);
       while($row3 = $result3->fetch_assoc()) {
-          $sqlNl = "SELECT * FROM landing WHERE id = ".$row3["idLanding"];
+          $sqlNl = "SELECT * FROM landing WHERE id = ".$row2["idLanding"]." WHERE fecha = '".date("Y-m-j", strtotime( '-1 days' ) )."'";
           $rNl = $conn->query($sqlNl);
           while($rowNl = $rNl->fetch_assoc()) {
               $dominio = $rowNl["dominio"];
@@ -63,7 +63,7 @@ if ($result->num_rows > 0) {
       $mail->Password = "46Wito74.";
       $mail->SetFrom("noreply@landingfy-creator.com");
       $mail->AddStringAttachment($attachment2, 'landing_emails.xls', 'base64', 'application/vnd.ms-excel');
-      $mail->Subject = "Emails list";
+      $mail->Subject = "Emails list: " .$dominio;
       $mail->Body = "Emails list";
       $mail->AddAddress($emailL);
       $mail->addCC($emailLc);
