@@ -29,7 +29,7 @@ if ($result->num_rows > 0) {
       $sql2 = "SELECT * FROM emails";
       $result2 = $conn->query($sql2);
       while($row2 = $result2->fetch_assoc()) {
-          $sqlNl = "SELECT * FROM landing WHERE id = ".$row2["idLanding"];
+          $sqlNl = "SELECT * FROM landing WHERE id = ".$row2["idLanding"]." AND fecha = '".date("Y-m-j", strtotime( '-1 days' ) )."'";
           $rNl = $conn->query($sqlNl);
           while($rowNl = $rNl->fetch_assoc()) {
               $dominio = $rowNl["dominio"];
@@ -44,7 +44,7 @@ if ($result->num_rows > 0) {
       $sql3 = "SELECT * FROM emails WHERE idLanding = ".$row["idLanding"];
       $result3 = $conn->query($sql3);
       while($row3 = $result3->fetch_assoc()) {
-          $sqlNl = "SELECT * FROM landing WHERE id = ".$row2["idLanding"]." WHERE fecha = '".date("Y-m-j", strtotime( '-1 days' ) )."'";
+          $sqlNl = "SELECT * FROM landing WHERE id = ".$row3["idLanding"]." AND fecha = '".date("Y-m-j", strtotime( '-1 days' ) )."'";
           $rNl = $conn->query($sqlNl);
           while($rowNl = $rNl->fetch_assoc()) {
               $dominio = $rowNl["dominio"];
