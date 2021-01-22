@@ -30,7 +30,6 @@ if ($result->num_rows > 0) {
       $result2 = $conn->query($sql2);
       while($row2 = $result2->fetch_assoc()) {
           $sqlNl = "SELECT * FROM landing WHERE id = ".$row2["idLanding"];
-          echo $sqlNl."<br>";
           $rNl = $conn->query($sqlNl);
           while($rowNl = $rNl->fetch_assoc()) {
               $dominio = $rowNl["dominio"];
@@ -46,14 +45,13 @@ if ($result->num_rows > 0) {
       $result3 = $conn->query($sql3);
       while($row3 = $result3->fetch_assoc()) {
           $sqlNl = "SELECT * FROM landing WHERE id = ".$row3["idLanding"];
-          echo $sqlNl."<br>";
           $rNl = $conn->query($sqlNl);
           while($rowNl = $rNl->fetch_assoc()) {
               $dominio = $rowNl["dominio"];
           }
           $attachment2  .= $row3["nombre"]."\t".$row3["apellido"]."\t".$row3["telefono"]."\t".$row3["email"]."\t".$row3["direccion"]."\t".$dominio."\t".$row3["fecha"]."\t".$row3["fnacimiento"]."\t".$row3["opciones"]."\t\n";
       }
-      /*$mail = new PHPMailer\PHPMailer\PHPMailer();
+      $mail = new PHPMailer\PHPMailer\PHPMailer();
       $mail->IsSMTP(); // enable SMTP
       $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
       $mail->SMTPAuth = true; // authentication enabled
@@ -73,8 +71,7 @@ if ($result->num_rows > 0) {
           echo "Mailer Error: " . $mail->ErrorInfo;
        } else {
           echo "Message has been sent";
-       }*/
-       echo $attachment2."<br>";
+       }
     }
       
       
@@ -83,8 +80,7 @@ if ($result->num_rows > 0) {
   echo "0 results";
 }
 $conn->close();
-echo $attachment;
-/*$mail = new PHPMailer\PHPMailer\PHPMailer();
+$mail = new PHPMailer\PHPMailer\PHPMailer();
 $mail->IsSMTP(); // enable SMTP
 $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
 $mail->SMTPAuth = true; // authentication enabled
@@ -104,5 +100,5 @@ $mail->addCC($emailCarbon);
     echo "Mailer Error: " . $mail->ErrorInfo;
  } else {
     echo "Message has been sent";
- }*/
+ }
 ?>
