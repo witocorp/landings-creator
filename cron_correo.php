@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 }
 $attachment  = '';
 $attachment2  = '';
-$attachmentH = "Nom\tLe nom\tTéléphone\temail\tAdresse\tDate dexpédition\tOptions\t\n";
+$attachmentH = utf8_decode("Nom\tLe nom\tTéléphone\tEmail\tAdresse\tDate dexpédition\tDAte de naissance\tOptions\t\n");
 $sql = "SELECT * FROM email";
 $result = $conn->query($sql);
 $emailAdmin = "";
