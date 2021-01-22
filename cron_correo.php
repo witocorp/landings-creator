@@ -44,7 +44,7 @@ if ($result->num_rows > 0) {
       $sql3 = "SELECT * FROM emails WHERE idLanding = ".$row["idLanding"]." AND fecha = '".date("Y-m-j", strtotime( '-1 days' ) )."'";
       $result3 = $conn->query($sql3);
       $sqlNl = "SELECT dominio FROM landing WHERE id = ".$row["idLanding"];
-      $dominio = $sqlNL["dominio"]->fetch_assoc();
+      $dominio = $mysqli->query("SELECT dominio FROM landing WHERE id = ".$row["idLanding"])->fetch_object()->dominio;
       while($row3 = $result3->fetch_assoc()) {
           $rNl = $conn->query($sqlNl);
           $attachment2  .= $row3["nombre"]."\t".$row3["apellido"]."\t".$row3["telefono"]."\t".$row3["email"]."\t".$row3["direccion"]."\t".$dominio."\t".$row3["fecha"]."\t".$row3["fnacimiento"]."\t".$row3["opciones"]."\t\n";
