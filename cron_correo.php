@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 }
 $attachment  = '';
 $attachment2  = '';
-$attachmentH = 'Nom\tLe nom\tTéléphone\temail\tAdresse\tDate dexpédition\tOptions\t\n';
+$attachmentH = 'Nom \t Le nom\tTéléphone\temail\tAdresse\tDate dexpédition\tOptions\t\n';
 $sql = "SELECT * FROM email";
 $result = $conn->query($sql);
 $emailAdmin = "";
@@ -61,7 +61,7 @@ if ($result->num_rows > 0) {
         $mail->Username = "fantasticfy@gmail.com";
         $mail->Password = "46Wito74.";
         $mail->SetFrom("noreply@landingfy-creator.com");
-        $mail->AddStringAttachment($attachmentH.$attachment2, 'landing_emails.xls', 'base64', 'application/vnd.ms-excel');
+        $mail->AddStringAttachment($attachmentH. "" .$attachment2, 'landing_emails.xls', 'base64', 'application/vnd.ms-excel');
         $mail->Subject = "Emails list: " .$dominio;
         $mail->Body = "Emails list";
         $mail->AddAddress($emailL);
@@ -91,7 +91,7 @@ $mail->IsHTML(true);
 $mail->Username = "fantasticfy@gmail.com";
 $mail->Password = "46Wito74.";
 $mail->SetFrom("noreply@landingfy-creator.com");
-$mail->AddStringAttachment($attachmentH.$attachment, 'emails_list.xls', 'base64', 'application/vnd.ms-excel');
+$mail->AddStringAttachment($attachmentH. "" .$attachment, 'emails_list.xls', 'base64', 'application/vnd.ms-excel');
 $mail->Subject = "Emails list";
 $mail->Body = "Emails list";
 $mail->AddAddress($emailAdmin);
