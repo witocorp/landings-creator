@@ -504,11 +504,20 @@ $(document).ready(function () {
       $('#titleOptions').val('');
   });
   $(document).on("click", "#addOption", function () {
+    if($('#newOption').val()===""){
+      $('#newOption').addClass('border-danger');
+    }elseif($('#newValue').val()===""){
+      $('#newValue').addClass('border-danger');
+    }else{
       $('#addtoform').append('<div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="'+
-      	$('#newOption').val()+'" value="'+$('#newValue').val()+'">'+
-      	'<label class="form-check-label">'+$('#newValue').val()+'</label></div>');
+      $('#newOption').val()+'" value="'+$('#newValue').val()+'">'+
+      '<label class="form-check-label">'+$('#newValue').val()+'</label></div>');
       $('#newOption').val('');
       $('#newValue').val('');
+      $('#newOption').removeClass('border-danger');
+      $('#newValue').removeClass('border-danger');
+    }
+    
   });
   $(document).on("click", ".menu_link", function () {
     var $tempElement = $("<input>");
