@@ -83,6 +83,7 @@ var editor = new Array();
           "html",
         ],
         imageInsertButtons: ["imageByURL"],
+        htmlRemoveTags: []
       })
     );
   });
@@ -194,6 +195,7 @@ $(document).ready(function () {
             "html",
           ],
           imageInsertButtons: ["imageByURL"],
+          htmlRemoveTags: [],
         })
       );
     })();

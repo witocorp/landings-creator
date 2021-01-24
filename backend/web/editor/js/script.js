@@ -182,6 +182,7 @@ $(document).ready(function () {
             "html",
           ],
           imageInsertButtons: ["imageByURL"],
+          htmlRemoveTags: [],
         })
       );
     })();
