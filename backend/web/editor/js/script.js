@@ -451,7 +451,50 @@ $(document).ready(function () {
     });
     contador++;
   });
+  $("#cn7").on("click", function () {
+    $("#anexos").append(
+      '<div class="container"><div class="portlet-header"><img src="img/move.png"></div><div class="eliminar_box">X</div><div class="menu_link"><img src="img/menu.png"></div> <div id="edit' +
+        contador +
+        '" data-id-creator="' +
+        contador +
+        '"><div class="row justify-content-center pt-5"> <div class="col col-md-8 text-center"> Pegar código de Shopify </div> </div> </div></div>'
+    );
+    (function () {
+      editor.push(
+        new FroalaEditor("#edit" + contador, {
+          toolbarButtons: [
+            "html",
+          ],
+          imageInsertButtons: ["imageByURL"],
+          htmlRemoveTags: [],
+        })
+      );
+    })();
+    $(function () {
+      $(".column").sortable({
+        connectWith: ".column",
+        handle: ".portlet-header",
+        cancel: ".portlet-toggle",
+        placeholder: "portlet-placeholder ui-corner-all",
+      });
 
+      $(".portlet")
+        .addClass(
+          "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"
+        )
+        .find(".portlet-header")
+        .addClass("ui-widget-header ui-corner-all")
+        .prepend(
+          "<span class='ui-icon ui-icon-minusthick portlet-toggle'></span>"
+        );
+
+      $(".portlet-toggle").on("click", function () {
+        var icon = $(this);
+        icon.toggleClass("ui-icon-minusthick ui-icon-plusthick");
+      });
+    });
+    contador++;
+  });
   $(document).on("click", ".eliminar_box", function () {
     // Make your changes here
     $(this).parent().remove();
