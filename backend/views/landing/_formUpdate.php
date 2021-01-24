@@ -178,6 +178,13 @@ $this->registerJsFile("@web/editor/js/script_update.js", ['depends' => 'yii\web\
               style="border: 1px solid; cursor: pointer" class="img-responsive"
             />
           </div>
+          <div class="text-left my-md-3">
+            <img
+              src="img/html_shopify.png"
+              id="cn7"
+              style="border: 1px solid; cursor: pointer" class="img-responsive"
+            />
+          </div>
            <h5 class="text-left my-md-3 text-center">Contacto</h5>
           <h5 class="text-left my-md-3">Title options</h5>
           <div class="text-left my-md-3">
