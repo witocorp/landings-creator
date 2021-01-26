@@ -299,6 +299,16 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
                           </div> 
                           <div id="addtoform" class="mt-4"></div>
                           <div class="row mt-4"> 
+                            <div class="col"> 
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="1" id="polPri">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    J'accepte la politique de confidentialité
+                                </label>
+                              </div>
+                            </div> 
+                          </div> 
+                          <div class="row mt-4"> 
                             <div class="col text-center"> 
                               <button id="enviar_form" type="submit" class="btn btn-primary">Submit</button> 
                             </div> 
@@ -317,15 +327,16 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
                  <div class="row align-items-top">
                   <div class="col-12 col-sm-12 col-md-8 col-lg-8 text-sm-left">
                     <nav class="nav flex-column">
-                      <a class="nav-link active" href="https://www.froala.com">Conditions générales de vente</a>
-                      <a class="nav-link" href="https://www.froala.com">Garantie</a>
-                      <a class="nav-link" href="https://www.froala.com">Informations clients et données personnelles</a>
-                      <a class="nav-link" href="https://www.froala.com">Informations sur les cookies et protection de la vie privée</a>
-                      <a class="nav-link" href="https://www.froala.com">Mentions légales du site</a>
+                      <a class="nav-link active" href="#ventaModal">Conditions générales de vente</a>
+                      <a class="nav-link" href="#garantiaModal">Garantie</a>
+                      <a class="nav-link" href="#privacidadModal">Informations clients et données personnelles</a>
+                      <a class="nav-link" href="#cookiesModal">Informations sur les cookies et protection de la vie privée</a>
+                      <a class="nav-link" href="#legalModal">Mentions légales du site</a>
                     </nav>
                   </div>
 
                   <div class="col-12 col-md-4 col-lg-4 ml-auto text-lg-left mt-4 mt-lg-0">
+                    <img src="img/no-logo.jpg">
                     <p class="my-auto">© 2021. All Rights Reserved</p>
                   </div>
                 </div>
