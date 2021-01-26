@@ -304,7 +304,7 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
                               <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="1" id="polPri">
                                 <label class="form-check-label" for="flexCheckDefault">
-                                    J'accepte la politique de confidentialité
+                                    J'accepte la <a href="#" data-bs-toggle="modal" data-bs-target="#privacidadModal">politique de confidentialité</a>
                                 </label>
                               </div>
                             </div> 
