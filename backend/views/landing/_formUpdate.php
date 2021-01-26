@@ -98,7 +98,7 @@ $this->registerJsFile("@web/editor/js/script_update.js", ['depends' => 'yii\web\
 		<?= $form->field($model, 'titulo')->textInput(['maxlength' => true]); ?>
 	</div>
 	<div class="col-md-6">
-		<?= $form->field($model, 'dominio')->textInput(['maxlength' => true]); ?>
+		<?= $form->field($model, 'dominio')->textInput(['maxlength' => true, 'readonly'=> true]); ?>
 	</div>
 	<div class="col-md-12">
 		<?= $form->field($model, 'descripcion')->textarea(['rows' => 3]); ?>
