@@ -4,6 +4,13 @@
 .banner_head p {
     margin: 0;
 }
+@media (min-width: 576px){
+  .modal-dialog {
+      max-width: 60%;
+      margin: 1.75rem auto;
+  }  
+}
+
 #editH nav{
   padding: 5px 20px;
 }
