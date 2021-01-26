@@ -116,6 +116,14 @@ $this->registerJsFile("@web/editor/js/script_update.js", ['depends' => 'yii\web\
 			</button>
       <button type="button" class="btn btn-info my-md-3" data-bs-toggle="modal" data-bs-target="#legalModal">
         <i class="fa fa-file-o" aria-hidden="true"></i> Legal Warning
+      <button type="button" class="btn btn-info my-md-3" data-bs-toggle="modal" data-bs-target="#cookiesModal">
+      <i class="fa fa-file-o" aria-hidden="true"></i> Política Cookies
+      <button type="button" class="btn btn-info my-md-3" data-bs-toggle="modal" data-bs-target="#privacidadModal">
+      <i class="fa fa-file-o" aria-hidden="true"></i> Política privacidad
+      <button type="button" class="btn btn-info my-md-3" data-bs-toggle="modal" data-bs-target="#garantiaModal">
+      <i class="fa fa-file-o" aria-hidden="true"></i> Garantía
+      <button type="button" class="btn btn-info my-md-3" data-bs-toggle="modal" data-bs-target="#ventaModal">
+      <i class="fa fa-file-o" aria-hidden="true"></i> Condiciones venta
       </button>
           <h5 class="text-left my-md-3">Slide</h5>
           <div class="text-left my-md-3">

@@ -55,7 +55,59 @@ var editor = new Array();
     })
   );
   editor.push(
-    new FroalaEditor("#editMb,#editMb1,#editMb2,#editMb3,#editMb4", {
+    new FroalaEditor("#editMb", {
+      toolbarButtons: [
+        "bold",
+        "italic",
+        "underline",
+        "insertLink",
+        "insertImage",
+        "html",
+      ],
+      imageInsertButtons: ["imageByURL"],
+    })
+  );
+  editor.push(
+    new FroalaEditor("#editMb1", {
+      toolbarButtons: [
+        "bold",
+        "italic",
+        "underline",
+        "insertLink",
+        "insertImage",
+        "html",
+      ],
+      imageInsertButtons: ["imageByURL"],
+    })
+  );
+  editor.push(
+    new FroalaEditor("#editMb2", {
+      toolbarButtons: [
+        "bold",
+        "italic",
+        "underline",
+        "insertLink",
+        "insertImage",
+        "html",
+      ],
+      imageInsertButtons: ["imageByURL"],
+    })
+  );
+  editor.push(
+    new FroalaEditor("#editMb3", {
+      toolbarButtons: [
+        "bold",
+        "italic",
+        "underline",
+        "insertLink",
+        "insertImage",
+        "html",
+      ],
+      imageInsertButtons: ["imageByURL"],
+    })
+  );
+  editor.push(
+    new FroalaEditor("#editMb4", {
       toolbarButtons: [
         "bold",
         "italic",
