@@ -71,6 +71,7 @@ $(document).ready(function(){
 		      	$('#email_form').val(''); 
 		      	$('#direccion_form').val('');
 		      	$("#nacimiento_form").val('');
+		      	$("#polPri").prop('checked', false);
 		      }
 		    });
 		}
