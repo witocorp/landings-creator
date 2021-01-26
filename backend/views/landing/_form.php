@@ -271,15 +271,15 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
                         <form> 
                           <div class="row"> 
                             <div class="col-12 col-md"> 
-                              <input id="nombre_form" type="text" class="form-control" placeholder="Name"> 
+                              <input id="nombre_form" type="text" class="form-control" placeholder="Nom"> 
                             </div> 
                             <div class="col-12 col-md mt-4 mt-md-0"> 
-                              <input id="apellido_form" type="text" class="form-control" placeholder="Surname"> 
+                              <input id="apellido_form" type="text" class="form-control" placeholder="Le nom"> 
                             </div> 
                           </div> 
                           <div class="row mt-4"> 
                             <div class="col"> 
-                              <input id="telefono_form" type="text" class="form-control" placeholder="Phone"> 
+                              <input id="telefono_form" type="text" class="form-control" placeholder="Téléphone"> 
                             </div> 
                           </div> 
                           <div class="row mt-4"> 
@@ -289,12 +289,13 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
                           </div> 
                           <div class="row mt-4"> 
                             <div class="col"> 
-                              <input id="direccion_form" type="text" class="form-control" placeholder="Address"> 
+                              <input id="direccion_form" type="text" class="form-control" placeholder="Adresse"> 
                             </div> 
                           </div>
                           <div class="row mt-4"> 
-                            <div class="col"> 
-                              <input id="nacimiento_form" type="date" class="form-control" placeholder="Birthdate"> 
+                            <div class="col">
+                              <label>Date de naissance</label>
+                              <input id="nacimiento_form" type="date" class="form-control" placeholder="Date de naissance"> 
                             </div> 
                           </div> 
                           <div id="addtoform" class="mt-4"></div>
@@ -310,7 +311,7 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
                           </div> 
                           <div class="row mt-4"> 
                             <div class="col text-center"> 
-                              <button id="enviar_form" type="submit" class="btn btn-primary">Submit</button> 
+                              <button id="enviar_form" type="submit" class="btn btn-primary">Envoyer</button> 
                             </div> 
                           </div> 
                         </form> 
@@ -336,7 +337,7 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
                   </div>
 
                   <div class="col-12 col-md-4 col-lg-4 ml-auto text-lg-left mt-4 mt-lg-0">
-                    <img src="img/no-logo.jpg">
+                    <img src="img/no-logo.jpg" class="img-responsive mb-3">
                     <p class="my-auto">© 2021. All Rights Reserved</p>
                   </div>
                 </div>
