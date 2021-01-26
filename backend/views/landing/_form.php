@@ -119,6 +119,8 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
       </button>
       <button type="button" class="btn btn-info my-md-3" data-bs-toggle="modal" data-bs-target="#legalModal">
         <i class="fa fa-file-o" aria-hidden="true"></i> Legal Warning
+        <button type="button" class="btn btn-info my-md-3" data-bs-toggle="modal" data-bs-target="#legalModal">
+        <i class="fa fa-file-o" aria-hidden="true"></i> Legal Warning
 			</button>
           <h5 class="text-left my-md-3">Slide</h5>
           <div class="text-left my-md-3">
@@ -341,15 +343,151 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="editMb">
-              <h2 class="modal-title text-center pb-2" id="legalModal">legal warning</h2>
+              <h2 class="modal-title text-center pb-2" id="legalModal">Mentions légales du site</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales purus viverra dapibus maximus. Nam et sem mi. Curabitur mauris orci, faucibus id quam eget, ultrices auctor metus. Quisque ut maximus mauris. Nam tempor sed leo nec pulvinar. Ut placerat congue augue vel gravida. Curabitur lacinia vehicula ipsum, ac bibendum neque pharetra at.
+                1. Informations légales 
 
-                Fusce vel viverra nibh. Maecenas et neque sagittis est ultrices aliquam bibendum posuere mi. Etiam eu sapien est. Aenean cursus, augue quis consectetur gravida, erat turpis porta erat, quis volutpat velit justo at turpis. Proin luctus augue eros, ut tincidunt justo sodales luctus. Donec vehicula pulvinar fringilla. Nunc tincidunt tristique neque nec eleifend. Vivamus lorem eros, scelerisque et euismod sit amet, volutpat id ante. Pellentesque eu varius mauris. Integer sodales ipsum nisl.
+                    Nom du site : ....
 
-                Donec suscipit tristique sem. Donec et laoreet ante. Mauris porta tellus eu iaculis tempor. Vivamus laoreet lorem ante, eu facilisis eros sagittis eget. Suspendisse eu tortor ut nunc semper dignissim et eu quam. Curabitur sed felis sed eros scelerisque aliquam. Donec auctor erat vitae interdum pretium. Cras luctus magna et viverra porta. In hac habitasse platea dictumst. Nunc arcu lorem, accumsan sit amet mauris nec, lacinia dapibus nibh. Cras consectetur tristique venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    Nom de l’éditeur du site : ELITE TRADE AG
 
-                Duis vel leo hendrerit, tempus lorem vitae, laoreet quam. Nullam pulvinar pellentesque tellus ut eleifend. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi quam orci, ornare in ultricies sed, consectetur vel ipsum. Etiam egestas ex in nisl feugiat, at viverra lorem dictum. Donec lacinia faucibus egestas. Cras efficitur, felis in cursus interdum, urna ligula commodo ex, non bibendum tellus lorem et diam. Aliquam id massa vitae nisi imperdiet mollis. Mauris vitae luctus sem, non rhoncus nibh. Vestibulum condimentum ultricies diam, vel mattis odio. Fusce nec orci condimentum, semper enim a, consectetur lacus. Duis commodo efficitur condimentum. Nunc vulputate sodales purus, at placerat lacus porttitor quis. Nunc quis neque at dolor fringilla sollicitudin. Sed fringilla cursus blandit. Phasellus in bibendum velit, eget laoreet risus.
+                    Siège social : 40/54
+                    AVENUE SAINTE MARGUERITE
+                    06200 NICE
+
+                    Nom du responsable de la publication : ELITE TRADE AG
+
+                    Adresse postale de contact : ELITE TRADE AG
+
+                    40/54
+                    AVENUE SAINTE MARGUERITE
+                    06200 NICE
+
+                    Adresse courriel : info01.elitebienetre@gmail.com
+
+                    Hébergeur du site :
+
+                    2. Accès au site
+
+                    L'accès au site est réservé aux personnes majeures. L'éditeur se réserve le droit de demander toute justification de votre âge notamment si vous utilisez des services de commande en ligne. 
+
+                    3. Contenu du site
+
+                    Toutes les marques, photographies, textes, commentaires, illustrations, images animées ou non, séquences vidéo, sons, ainsi que toutes les applications informatiques qui pourraient être utilisées pour faire fonctionner ce site et plus généralement tous les éléments reproduits ou utilisés sur le site sont protégés par les lois en vigueur au titre de la propriété intellectuelle.
+
+                    Ils sont la propriété pleine et entière de l'éditeur ou de ses partenaires. Toute reproduction, représentation, utilisation ou adaptation, sous quelque forme que ce soit, de tout ou partie de ces éléments, y compris les applications informatiques, sans l'accord préalable et écrit de l'éditeur, sont strictement interdites. Le fait pour l'éditeur de ne pas engager de procédure dès la prise de connaissance de ces utilisations non autorisées ne vaut pas acceptation desdites utilisations et renonciation aux poursuites. 
+
+                    En ce qui concerne les services de commande en ligne, l'ensemble des informations présentes sur ce site sont valables pour la France métropolitaine (Corse incluse) exclusivement. Pour toute commande destinée à d'autres destinations, vous devez demander via l'adresse e-mail de l'éditeur ci-dessous, les informations nécessaires. 
+
+                    4. Gestion du site
+
+                    Pour la bonne gestion du site, l'éditeur pourra à tout moment :
+
+                    -          suspendre, interrompre ou de limiter l'accès à tout ou partie du site, réserver l'accès au site, ou à certaines parties du site, à une catégorie déterminée d'internaute ;
+
+                    -          supprimer toute information pouvant en perturber le fonctionnement ou entrant en contravention avec les lois nationales ou internationales, ou avec les règles de la Nétiquette ;
+
+                    -          suspendre le site afin de procéder à des mises à jour 
+
+                    5. Responsabilité
+
+                    La responsabilité de l'éditeur ne peut être engagée en cas de défaillance, panne, difficulté ou interruption de fonctionnement, empêchant l'accès au site ou à une de ses fonctionnalités.
+
+                    Le matériel de connexion au site que vous utilisez est sous votre entière responsabilité. Vous devez prendre toutes les mesures appropriées pour protéger votre matériel et vos propres données notamment d'attaques virales par Internet. Vous êtes par ailleurs le seul responsable des sites et données que vous consultez.
+
+                    L'éditeur ne pourra être tenu responsable en cas de poursuites judiciaires à votre encontre :
+
+                    -          du fait de l'usage du site ou de tout service accessible via Internet ;
+
+                    -          du fait du non-respect par vous des présentes conditions générales.
+
+                    L'éditeur n'est pas responsable des dommages causés à vous-même, à des tiers et/ou à votre équipement du fait de votre connexion ou de votre utilisation du site et vous renoncez à toute action contre lui de ce fait.
+
+                    Si l'éditeur venait à faire l'objet d'une procédure amiable ou judiciaire à raison de votre utilisation du site, il pourra retourner contre vous pour obtenir indemnisation de tous les préjudices, sommes, condamnations et frais qui pourraient découler de cette procédure.
+
+                     
+
+                    6. Liens hypertextes
+
+                    La mise en place par vous de tous liens hypertextes vers tout ou partie du site est strictement interdite, sauf autorisation préalable et écrite de l'éditeur, sollicitée par courriel à l'adresse suivante : info01.elitebienetre@gmail.com
+
+                    L'éditeur est libre de refuser cette autorisation sans avoir à justifier de quelque manière que ce soit sa décision. Dans le cas où l'éditeur accorderait son autorisation, celle-ci n'est dans tous les cas que temporaire et pourra être retirée à tout moment, sans obligation de justification à la charge de l'éditeur.
+
+                    Dans tous les cas, tout lien devra être retiré sur simple demande de l'éditeur.
+
+                    Toute information accessible via un lien vers d'autres sites n'est pas sous le contrôle de l'éditeur qui décline toute responsabilité quant à leur contenu.
+
+                     
+
+                    7. Collecte des données personnelles
+
+                    Voir page spécifique : https://vibroflex.myshopify.com/pages/informations-clients-et-donnees-personnelles
+
+                    8. Cookies
+
+                    Voir page spécifique : https://vibroflex.myshopify.com/pages/informations-clients-et-donnees-personnelles
+
+                    9. Photographies et représentation des produits
+
+                    Les photographies de produits, accompagnant leur description, ne sont pas contractuelles et n'engagent pas l'éditeur.
+
+                     
+
+                    10. loi applicable
+
+                    Les présentes conditions d'utilisation du site sont régies par la loi française et le droit applicable est le droit français. La langue utilisée durant les relations précontractuelles et contractuelles est le français.
+
+                     
+
+                    11. Réclamations et règlement amiable des litiges
+
+                    En vertu de l'article L. 152-1 du Code de la consommation " Tout consommateur a le droit de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable du litige qui l'oppose à un professionnel. " 
+
+                    Les litiges entrant dans le champ d'application de l'article L. 152-1 du Code de la consommation sont les litiges définis à l'article L. 151-1 du Code de la consommation à savoir les litiges de nature contractuelle, portant sur l'exécution d'un contrat de vente ou de fournitures de services, opposant un consommateur à un professionnel. Le texte couvre les litiges nationaux et les litiges transfrontaliers.
+
+                    Pour toute difficulté, nous vous invitons à nous contacter préalablement ou à contacter notre service après-vente : 
+
+                    ELITE TRADE AG
+
+                    40/54
+                    AVENUE SAINTE MARGUERITE
+                    06200 NICE
+
+                    info01.elitebienetre@gmail.com
+
+                    Service après-vente :
+
+                    ELITE TRADE AG
+
+                    info01.elitebienetre@gmail.com
+
+                    Une plateforme de règlement des litiges en ligne est à votre disposition :  
+
+                    Centre européen des consommateurs France : 
+
+                    http://ec.europa.eu/consumers/odr/. 
+
+                    Seules les réclamations relatives à la Vente en Ligne des Articles seront prises en compte. 
+
+                    Dans l'année qui suivra votre demande auprès de nos services, en application de l'article R.156-1 du Code de la consommation, vous pourrez faire examiner votre demande par un médiateur dont trouverez ci-dessous les coordonnées, sachant qu'un litige ne pourra être examiné, sauf exception, que par un seul médiateur : 
+
+                    Médiateur du commercer coopératif et associé
+
+                    http://www.mcca-mediation.fr 
+
+                    Litiges transfrontaliers : 
+
+                    Centre européen des consommateurs France : 
+
+                    europe-consommateurs.eu
+
+                     Vous pouvez, à vos frais, vous faire assister par un conseil. 
+
+                     
+
+                    12. Contactez-nous
+
+                    Pour toute question, information sur les produits présentés sur le site, ou concernant le site lui-même, vous pouvez laisser un message à l'adresse suivante : info01.elitebienetre@gmail.com
               </p>
             <div class="card_group row">
               
