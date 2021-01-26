@@ -55,7 +55,7 @@ var editor = new Array();
     })
   );
   editor.push(
-    new FroalaEditor("#editMb,#editMb1,#editMb2,#editMb3,#editMb4", {
+    new FroalaEditor("#editMb", {
       toolbarButtons: [
         "bold",
         "italic",
