@@ -439,7 +439,7 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
               
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body" id="editMb">
+            <div class="modal-body" id="editMb1">
               <h2 class="modal-title text-center pb-2" id="cookiesModal">Informations sur les cookies et protection de la vie privée</h2>
               <p>
                 <p>La présente page est dédiée à la politique de protection de vie privée mise en œuvre par&nbsp;ELITE TRADE AG</p>
@@ -540,7 +540,7 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
               
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body" id="editMb">
+            <div class="modal-body" id="editMb2">
               <h2 class="modal-title text-center pb-2" id="privacidadModal">Informations clients et données personnelles</h2>
               <p>
                 <p>Identité : ELITE TRADE AG</p>
@@ -589,7 +589,7 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
               
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body" id="editMb">
+            <div class="modal-body" id="editMb3">
               <h2 class="modal-title text-center pb-2" id="garantiaModal">Garantie</h2>
               <p>
                   Les articles vendus sur Vibroflex sont reconnus par les plus grandes entreprises du secteur. Nous garantissons des produits de haute qualité et restons à l'écoute de nos clients. Nous sommes convaincus que le VibroFlex fonctionnera pour vous, cependant, si vous n'êtes pas 100% satisfaits des résultats que vous obtenez, vous n'avez qu'à le retourner dans les 90 jours et demander un remboursement.
@@ -611,7 +611,7 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
               
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body" id="editMb">
+            <div class="modal-body" id="editMb4">
               <h2 class="modal-title text-center pb-2" id="ventaModal">Conditions générales de vente</h2>
              <p>Le présent site Internet vibroflex.fr (le " Site Internet") est édité par la société ELITE TRADE AG. 40/54<br>AVENUE SAINTE MARGUERITE<br>06200 NICE</p>
               <p>Email : <a href="mailto:info01.elitebienetre@gmail.com" aria-describedby="a11y-external-message">info01.elitebienetre@gmail.com</a>, numéro de téléphone:01 86 65 00 05 (offre valable uniquement sur la France métropolitaine)&nbsp;</p>
