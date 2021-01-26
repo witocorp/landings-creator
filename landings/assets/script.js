@@ -3,13 +3,6 @@ function validateEmail($email) {
   return emailReg.test( $email );
 }
 $(document).ready(function(){
-	$('a').on('click', function(){
-		if($(this).attr("href")=="#legalwarning"){
-			event.preventDefault();
-			$('#legalModal').modal('show');	
-		}
-	});
-
 	$('#enviar_form').on('click', function(){
 		var flag = 0;
 		var options = "";	
@@ -27,6 +20,12 @@ $(document).ready(function(){
 			flag = 1;
 		}else{
 			$('#apellido_form').removeClass('border-danger');
+		}
+		if($('#polPri').is(':checked')){
+			$('#polPri').removeClass('border-danger');
+		}else{
+			$('#polPri').addClass('border-danger');
+			flag = 1;
 		}
 		if(!$('#telefono_form').val()){
 			$('#telefono_form').addClass('border-danger');
