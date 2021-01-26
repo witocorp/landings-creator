@@ -314,9 +314,8 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
         </main>
         <footer id="editF">
             <div class="container">
-                 <div class="row align-items-top text-center">
+                 <div class="row align-items-top">
                   <div class="col-12 col-sm-12 col-md-8 col-lg-8 text-sm-left">
-                    <h3><strong>Group 1</strong></h3>
                     <nav class="nav flex-column">
                       <a class="nav-link active" href="https://www.froala.com">Conditions générales de vente</a>
                       <a class="nav-link" href="https://www.froala.com">Garantie</a>
@@ -327,7 +326,7 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
                   </div>
 
                   <div class="col-12 col-md-4 col-lg-4 ml-auto text-lg-left mt-4 mt-lg-0">
-                    © 2021. All Rights Reserved
+                    <p class="my-auto">© 2021. All Rights Reserved</p>
                   </div>
                 </div>
             </div>
