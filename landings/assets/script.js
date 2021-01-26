@@ -3,6 +3,10 @@ function validateEmail($email) {
   return emailReg.test( $email );
 }
 $(document).ready(function(){
+	$('footer a').on('click', function(){
+			event.preventDefault();
+			$($(this).attr("href")).modal('show');
+	});
 	$('#enviar_form').on('click', function(){
 		var flag = 0;
 		var options = "";	
