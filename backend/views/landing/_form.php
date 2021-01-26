@@ -314,15 +314,22 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
         </main>
         <footer id="editF">
             <div class="container">
-              <div class="row align-items-top text-center text-md-left">
-                <a href="">Conditions générales de vente</a> <a href="">Garantie</a>  <a href="">Informations clients et données personnelles</a>  <a href="">Informations sur les cookies et protection de la vie privée</a>  <a href="">Mentions légales du site</a> 
-              </div>
+                 <div class="row align-items-top text-center">
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 text-sm-left">
+                    <h3><strong>Group 1</strong></h3>
+                    <nav class="nav flex-column">
+                      <a class="nav-link active" href="https://www.froala.com">Conditions générales de vente</a>
+                      <a class="nav-link" href="https://www.froala.com">Garantie</a>
+                      <a class="nav-link" href="https://www.froala.com">Informations clients et données personnelles</a>
+                      <a class="nav-link" href="https://www.froala.com">Informations sur les cookies et protection de la vie privée</a>
+                      <a class="nav-link" href="https://www.froala.com">Mentions légales du site</a>
+                    </nav>
+                  </div>
 
-              <div class="row mt-5">
-                <div class="col text-center">
-                  © 2021. All Rights Reserved
+                  <div class="col-12 col-md-4 col-lg-4 ml-auto text-lg-left mt-4 mt-lg-0">
+                    © 2021. All Rights Reserved
+                  </div>
                 </div>
-              </div>
             </div>
         </footer>
         <div class="modal" id="legalModal" tabindex="-1" aria-labelledby="legalModal" aria-hidden="true">
