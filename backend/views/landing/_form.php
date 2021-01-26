@@ -431,7 +431,6 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
             </div>
           </div>
          </div>
-<!--
       <div class="modal" id="cookiesModal" tabindex="-1" aria-labelledby="cookiesModal" aria-hidden="true">
           <div class="modal-dialog">
           <div class="modal-content">
@@ -791,7 +790,6 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
             </div>
           </div>
          </div>
--->
 
       </div>
     </div>

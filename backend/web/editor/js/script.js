@@ -67,6 +67,58 @@ var editor = new Array();
       imageInsertButtons: ["imageByURL"],
     })
   );
+  editor.push(
+    new FroalaEditor("#editMb1", {
+      toolbarButtons: [
+        "bold",
+        "italic",
+        "underline",
+        "insertLink",
+        "insertImage",
+        "html",
+      ],
+      imageInsertButtons: ["imageByURL"],
+    })
+  );
+  editor.push(
+    new FroalaEditor("#editMb2", {
+      toolbarButtons: [
+        "bold",
+        "italic",
+        "underline",
+        "insertLink",
+        "insertImage",
+        "html",
+      ],
+      imageInsertButtons: ["imageByURL"],
+    })
+  );
+  editor.push(
+    new FroalaEditor("#editMb3", {
+      toolbarButtons: [
+        "bold",
+        "italic",
+        "underline",
+        "insertLink",
+        "insertImage",
+        "html",
+      ],
+      imageInsertButtons: ["imageByURL"],
+    })
+  );
+  editor.push(
+    new FroalaEditor("#editMb4", {
+      toolbarButtons: [
+        "bold",
+        "italic",
+        "underline",
+        "insertLink",
+        "insertImage",
+        "html",
+      ],
+      imageInsertButtons: ["imageByURL"],
+    })
+  );
 })();
 $(function () {
     $(".column").sortable({
