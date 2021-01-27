@@ -421,9 +421,7 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
                 <p>&nbsp;</p>
                 <p><strong>12. Contactez-nous</strong></p>
                 <p>Pour toute question, information sur les produits présentés sur le site, ou concernant le site lui-même, vous pouvez laisser un message à l'adresse suivante&nbsp;:&nbsp;<a href="mailto:info01.elitebienetre@gmail.com" aria-describedby="a11y-external-message">info01.elitebienetre@gmail.com</a></p>
-            <div class="card_group row">
-              
-            </div>
+            
             </div>
             </div>
             <div class="modal-footer">
@@ -522,9 +520,6 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
                 <li>Menu &gt; Paramètres &gt; Effacer tous les&nbsp;cookies</li>
                 </ul>
               </p>
-            <div class="card_group row">
-              
-            </div>
             </div>
             </div>
             <div class="modal-footer">
@@ -571,9 +566,6 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
                 <p>&nbsp;Mineurs.</p>
                 <p>Les moins de 14 ans doivent s'abstenir de nous indiquer leurs données personnelles Vous pouvez consulter la politique de confidentialité sur</p>
               </p>
-            <div class="card_group row">
-              
-            </div>
             </div>
             </div>
             <div class="modal-footer">
@@ -593,9 +585,6 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
               <p>
                   Les articles vendus sur Vibroflex sont reconnus par les plus grandes entreprises du secteur. Nous garantissons des produits de haute qualité et restons à l'écoute de nos clients. Nous sommes convaincus que le VibroFlex fonctionnera pour vous, cependant, si vous n'êtes pas 100% satisfaits des résultats que vous obtenez, vous n'avez qu'à le retourner dans les 90 jours et demander un remboursement.
               </p>
-            <div class="card_group row">
-              
-            </div>
             </div>
             </div>
             <div class="modal-footer">
@@ -780,9 +769,6 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
               <p><strong>16. Loi applicable</strong></p>
               <p>Le présent Contrat sera régi par la loi française et le tribunal compétent sera celui tel que défini par les lois françaises.</p>
   
-            <div class="card_group row">
-              
-            </div>
             </div>
             </div>
             <div class="modal-footer">
