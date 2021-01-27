@@ -208,7 +208,7 @@ $this->registerJsFile("@web/editor/js/script_update.js", ['depends' => 'yii\web\
         </div>
       </div>
       <div class="col h-100 block-design" id="code_html">
-        <?php echo $model->codigo;?>
+        <?php echo htmlentities($model->codigo;)?>
       </div>
     </div>
     <?php ActiveForm::end(); ?>
