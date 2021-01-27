@@ -72,8 +72,9 @@
   .carousel {
     margin-bottom: 0 !important;
   }
-  #editCt .row.py-5 {
-	padding-top: 0 !important;		
+  #editCt .py-5 {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;		
   }	
 }
 .nav-masthead .nav-link:hover,
