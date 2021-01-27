@@ -9,7 +9,9 @@
       max-width: 60% !important;
   }  
 }
-
+.form-check-inline {
+    display: block !important;
+}
 #editH nav{
   padding: 5px 20px;
 }

@@ -13,6 +13,9 @@
     text-decoration: none;
     color: #fff;
 }
+.form-check-inline {
+    display: block !important;
+}
 .banner_head p{
   margin: 0;    
 }
