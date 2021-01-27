@@ -69,6 +69,12 @@
     position: relative !important;
     height: auto !important;
   }
+  .carousel {
+    margin-bottom: 0 !important;
+  }
+  #editCt .row.py-5 {
+	padding-top: 0 !important;		
+  }	
 }
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
