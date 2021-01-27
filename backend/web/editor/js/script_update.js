@@ -136,7 +136,7 @@ var editor = new Array();
         ],
         imageInsertButtons: ["imageByURL"],
         htmlRemoveTags: [],
-        htmlExecuteScripts: false
+        htmlExecuteScripts: true
       })
     );
   });
@@ -533,7 +533,7 @@ $(document).ready(function () {
           ],
           imageInsertButtons: ["imageByURL"],
           htmlRemoveTags: [],
-          htmlExecuteScripts: false
+          htmlExecuteScripts: true
         })
       );
     })();
