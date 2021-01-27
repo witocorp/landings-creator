@@ -142,7 +142,7 @@ var editor = new Array();
   contador++;
 })();
 $(document).ready(function () {
-   $('#code_html').html($('#code_html').html());
+   $('#code_html').html($('#code_html').text());
    $(function () {
     $(".column").sortable({
       connectWith: ".column",
