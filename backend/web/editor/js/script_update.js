@@ -1,6 +1,3 @@
-$(document).ready(function () {
-   $('#code_html').html($('#code_html').text());
- });
 var contador = 0;
 var contactual = 0;
 var editor = new Array();
