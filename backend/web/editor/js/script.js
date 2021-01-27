@@ -519,6 +519,7 @@ $(document).ready(function () {
           ],
           imageInsertButtons: ["imageByURL"],
           htmlRemoveTags: [],
+          htmlExecuteScripts: false
         })
       );
     })();
