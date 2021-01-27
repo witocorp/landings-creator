@@ -50,7 +50,10 @@
     text-decoration: none;
     padding: .5rem;
 }
-
+#editCt .py-5 {
+	padding-top: 1rem !important;
+	padding-bottom: 1rem !important;		
+}
 #editF, #anexos
 {
   padding: 5px 20px;
