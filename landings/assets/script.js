@@ -3,7 +3,7 @@ function validateEmail($email) {
   return emailReg.test( $email );
 }
 $(document).ready(function(){
-	$('footer a').on('click', function(){
+	$('footer a, .nk-cookie-banner a').on('click', function(){
 			event.preventDefault();
 			$($(this).attr("href")).modal('show');
 	});
