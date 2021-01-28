@@ -96,6 +96,7 @@ class LandingController extends Controller
 			fwrite($myfile, $contenido);
 			fclose($myfile);
 			$model->save();
+			//xavi
 			return $this->redirect(['index']);
         }
 
