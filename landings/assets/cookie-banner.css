@@ -1,5 +1,5 @@
 .nk-cookie-banner {
-    position: fixed;
+    position: fixed !important;
     bottom: 0px;
     left: 0px;
     width: 100%;
