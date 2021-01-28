@@ -11,6 +11,9 @@
 	background: #EA0605 !important; 	
 	color: #fff !important;
     font-size: .8rem;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-color: #EA0605 !important;
 }
 .nk-cookie-banner a {
     color: #fff;
