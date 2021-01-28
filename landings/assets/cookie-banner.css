@@ -27,7 +27,7 @@
     border-radius: initial;
 }
 .btn-primary:hover {
-    color: initial;
-    background-color: initial;
-    border-color: initial;
+    color: initial !important;
+    background-color: initial !important;
+    border-color: initial !important;
 }
