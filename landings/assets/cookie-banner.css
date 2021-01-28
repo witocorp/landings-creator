@@ -9,4 +9,8 @@
 }
 .nk-cookie-banner{
 	background: #EA0605 !important; 	
+	color: #fff;
+}
+.nk-cookie-banner a {
+    color: #fff;
 }
