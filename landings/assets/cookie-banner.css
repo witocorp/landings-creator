@@ -26,3 +26,8 @@
     text-transform: uppercase;
     border-radius: initial;
 }
+.btn-primary:hover {
+    color: initial;
+    background-color: initial;
+    border-color: initial;
+}
