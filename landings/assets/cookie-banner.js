@@ -7,7 +7,7 @@
  */
 function showCookieBanner(){
     let cookieBanner = document.getElementsByClassName("nk-cookie-banner")[0];
-    cookieBanner.style.display = "block";
+    cookieBanner.style.display = "flex";
 }
 
 /**
