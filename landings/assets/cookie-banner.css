@@ -14,3 +14,15 @@
 .nk-cookie-banner a {
     color: #fff;
 }
+.nk-cookie-banner button{
+    padding: .8rem .9rem;
+    background: unset;
+    border: 1px solid #d8d8d8;
+    color: #fff;
+    font-weight: 800;
+    font-size: .7rem;
+    line-height: 1.167em;
+    letter-spacing: .113rem;
+    text-transform: uppercase;
+    border-radius: initial;
+}
