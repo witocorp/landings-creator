@@ -6,4 +6,7 @@
     z-index: 999;
     border-radius: 0px;
     display: none;
-  }
+}
+.nk-cookie-banner{
+	background: #EA0605 !important; 	
+}
