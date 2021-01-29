@@ -3,9 +3,9 @@ function validateEmail($email) {
   return emailReg.test( $email );
 }
 $(document).ready(function(){
-	
-	$('.nk-cookie-banner').css({"background-color": '"'+$("body").data("color")+' !important"'});     
-    console.log('border-color:'+$("body").data("color")+' !important');
+	var color = $("body").data("color");
+	$('.nk-cookie-banner').css({"background-color": '"'+color+' !important"'});     
+    console.log(color);
 	$('footer a, .nk-cookie-banner a').on('click', function(){
 			event.preventDefault();
 			$($(this).attr("href")).modal('show');
