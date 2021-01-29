@@ -4,7 +4,7 @@ function validateEmail($email) {
 }
 $(document).ready(function(){
 	var color = $("body").data("color");
-	$('.nk-cookie-banner').css({"background-color": '"'+color+' !important"'});     
+	$('.nk-cookie-banner').css({"background-color": color});     
     console.log(color);
 	$('footer a, .nk-cookie-banner a').on('click', function(){
 			event.preventDefault();
