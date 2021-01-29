@@ -100,9 +100,12 @@ $this->registerJsFile("@web/editor/js/script_update.js", ['depends' => 'yii\web\
 	<div class="col-md-6">
 		<?= $form->field($model, 'dominio')->textInput(['maxlength' => true, 'readonly'=> true]); ?>
 	</div>
-	<div class="col-md-12">
+	<div class="col-md-6">
 		<?= $form->field($model, 'descripcion')->textarea(['rows' => 3]); ?>
 	</div>
+  <div class="col-md-6">
+    <?= $form->field($model, 'color')->textInput(['maxlength' => true]); ?>
+  </div>
     <?= $form->field($model, 'codigo')->hiddenInput()->label(false); ?>
 	
 	<h3><i class="fa fa-code" aria-hidden="true"></i> Landing</h3>

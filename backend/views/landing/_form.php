@@ -101,9 +101,12 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
 	<div class="col-md-6">
 		<?= $form->field($model, 'dominio')->textInput(['maxlength' => true]); ?>
 	</div>
-	<div class="col-md-12">
+	<div class="col-md-6">
 		<?= $form->field($model, 'descripcion')->textarea(['rows' => 3]); ?>
 	</div>
+  <div class="col-md-6">
+    <?= $form->field($model, 'color')->textInput(['maxlength' => true]); ?>
+  </div>
     <?= $form->field($model, 'codigo')->hiddenInput()->label(false); ?>
 	<div class="text-center">
     <input type="button" id="disena" value="Design landing" class="btn btn-info">  

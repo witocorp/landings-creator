@@ -12,6 +12,7 @@ use Yii;
  * @property string $descripcion
  * @property string $codigo
  * @property string $dominio
+ * @property string $color
  */
 class Landing extends \yii\db\ActiveRecord
 {
@@ -29,9 +30,9 @@ class Landing extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['titulo', 'descripcion', 'codigo', 'dominio'], 'required'],
+            [['titulo', 'descripcion', 'codigo', 'dominio', 'color'], 'required'],
             [['codigo'], 'string'],
-            [['titulo', 'descripcion', 'dominio'], 'string', 'max' => 500],
+            [['titulo', 'descripcion', 'dominio', 'color'], 'string', 'max' => 500],
         ];
     }
 
@@ -46,6 +47,7 @@ class Landing extends \yii\db\ActiveRecord
             'descripcion' => 'Descripcion',
             'codigo' => 'Codigo',
             'dominio' => 'Dominio',
+            'color' => 'Color corporativo',
         ];
     }
 }

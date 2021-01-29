@@ -18,7 +18,7 @@ class LandingSearch extends Landing
     {
         return [
             [['id'], 'integer'],
-            [['titulo', 'descripcion', 'codigo', 'dominio'], 'safe'],
+            [['titulo', 'descripcion', 'codigo', 'dominio', 'color'], 'safe'],
         ];
     }
 
@@ -64,7 +64,8 @@ class LandingSearch extends Landing
         $query->andFilterWhere(['like', 'titulo', $this->titulo])
             ->andFilterWhere(['like', 'descripcion', $this->descripcion])
             ->andFilterWhere(['like', 'codigo', $this->codigo])
-            ->andFilterWhere(['like', 'dominio', $this->dominio]);
+            ->andFilterWhere(['like', 'dominio', $this->dominio])
+            ->andFilterWhere(['like', 'color', $this->color]);
 
         return $dataProvider;
     }
