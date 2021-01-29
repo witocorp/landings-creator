@@ -3,6 +3,9 @@ function validateEmail($email) {
   return emailReg.test( $email );
 }
 $(document).ready(function(){
+	
+	$('.nk-cookie-banner').css({ 'border-color': $("body").data("color")+' !important', 'background': $("body").data("color")+' !important' });     
+    
 	$('footer a, .nk-cookie-banner a').on('click', function(){
 			event.preventDefault();
 			$($(this).attr("href")).modal('show');
