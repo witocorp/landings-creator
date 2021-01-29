@@ -94,19 +94,18 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
 <div class="landing-form">
 	<h3><i class="fa fa-cog" aria-hidden="true"></i> Options</h3>
     <?php $form = ActiveForm::begin(); ?>
-	<div class="col-md-6"><i class="bi bi-align-bottom"></i>
-	
+	<div class="col-md-4"><i class="bi bi-align-bottom"></i>
 		<?= $form->field($model, 'titulo')->textInput(['maxlength' => true]); ?>
 	</div>
-	<div class="col-md-6">
+	<div class="col-md-4">
 		<?= $form->field($model, 'dominio')->textInput(['maxlength' => true]); ?>
 	</div>
+  <div class="col-md-4">
+    <?= $form->field($model, 'color')->textInput(['maxlength' => true]); ?>
+  </div>
 	<div class="col-md-6">
 		<?= $form->field($model, 'descripcion')->textarea(['rows' => 3]); ?>
 	</div>
-  <div class="col-md-6">
-    <?= $form->field($model, 'color')->textInput(['maxlength' => true]); ?>
-  </div>
     <?= $form->field($model, 'codigo')->hiddenInput()->label(false); ?>
 	<div class="text-center">
     <input type="button" id="disena" value="Design landing" class="btn btn-info">  
