@@ -98,9 +98,9 @@ class LandingController extends Controller
 			fclose($myfile);
 			$model->save();
 			//xavi
-			echo shell_exec($_SERVER['DOCUMENT_ROOT']."/backend/controllers/create_vhost.sh 'landingfy.sitioenlinea.es'");
-            die();
-			//return $this->redirect(['index']);
+			shell_exec($_SERVER['DOCUMENT_ROOT']."/backend/controllers/create_vhost.sh '".$model->dominio."'");
+            
+			return $this->redirect(['index']);
         }
 
         return $this->render('create', [
