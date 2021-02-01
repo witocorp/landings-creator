@@ -103,7 +103,7 @@ class LandingController extends Controller
         }
 
         return $this->render('create', [
-            'model' => $model,
+            //'model' => $model,
         ]);
 		
         /*$model = new Landing();
