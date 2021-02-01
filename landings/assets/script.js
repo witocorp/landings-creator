@@ -6,8 +6,14 @@ $(document).ready(function(){
 	var color = $("body").data("color");
 	$('.nk-cookie-banner').css({"background-color": color, "border-color": color});
 	$('.banner_head').css({"background-color": color});
-	  
-    console.log(color);
+        $('.btn-outline-danger').css({"color": color, "border-color": color});
+        $('.btn-outline-danger').hover(
+           function() {
+              $(this).css({"background-color": color, "color": "#fff"})
+           }, function() {
+              $(this).css({"color": color,"border-color": color, "background-color": "initial"})
+           }
+        );
 	$('footer a, .nk-cookie-banner a').on('click', function(){
 			event.preventDefault();
 			$($(this).attr("href")).modal('show');

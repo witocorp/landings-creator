@@ -112,9 +112,20 @@ $this->title = $nombre;
       'direccion',
       //'idLanding',
       'fecha',
-      'fnacimiento',
+       [
+            'attribute'=>'Fnacimiento',
+            'header'=>'F. Nacimiento',
+            'format'=>'raw',    
+            'value' => function($model, $key, $index)
+            {   
+                    if($model->fnacimiento === "9999-09-09"){
+                        return "";
+                    }else{
+                        return $model->fnacimiento;
+                    }
+            },
+       ],
       'opciones',
-
 
       [
         'class' => 'yii\grid\ActionColumn',
