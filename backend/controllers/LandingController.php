@@ -98,6 +98,7 @@ class LandingController extends Controller
 			fclose($myfile);
 			$model->save();
 			//xavi
+			shell_exec("./create_vhost.sh '".$model->dominio."'");
 			return $this->redirect(['index']);
         }
 
