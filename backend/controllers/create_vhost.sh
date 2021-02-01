@@ -27,5 +27,4 @@ echo "#### $domini
 </VirtualHost>" > /etc/httpd/conf.d/$domini.conf
 
 #Activar ssl i reiniciar apache
-sudo certbot --non-interactive --agree-tos --redirect --no-eff-email --cert-name $domini --apache -d $domini -m osbendc@gmail.com
-sudo apachectl restart
+sudo certbot --non-interactive --agree-tos --redirect --no-eff-email --cert-name $domini --apache -d $domini -m victor@fantasticfy.com
