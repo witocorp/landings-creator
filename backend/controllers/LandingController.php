@@ -99,11 +99,12 @@ class LandingController extends Controller
 			$model->save();
 			//xavi
 			echo shell_exec("./create_vhost.sh 'landingfy.sitioenlinea.es'");
+            die();
 			//return $this->redirect(['index']);
         }
 
         return $this->render('create', [
-            //'model' => $model,
+            'model' => $model,
         ]);
 		
         /*$model = new Landing();
