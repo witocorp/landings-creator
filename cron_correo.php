@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 }
 $attachment  = '';
 $attachment2  = '';
-$attachmentH = utf8_decode("Prénom\tNom\tTéléphone\tEmail\tAdresse\tDomaine\tDate dexpédition\tDate de naissance\tOptions\t\n");
+$attachmentH = utf8_encode("Prénom\tNom\tTéléphone\tEmail\tAdresse\tDomaine\tDate dexpédition\tDate de naissance\tOptions\t\n");
 $sql = "SELECT * FROM email";
 $result = $conn->query($sql);
 $emailAdmin = "";
@@ -35,7 +35,11 @@ if ($result->num_rows > 0) {
           while($rowNl = $rNl->fetch_assoc()) {
               $dominio = $rowNl["dominio"];
           }
-          $attachment  .= $row2["nombre"]."\t".$row2["apellido"]."\t".$row2["telefono"]."\t".$row2["email"]."\t".$row2["direccion"]."\t".$dominio."\t".$row2["fecha"]."\t".$row2["fnacimiento"]."\t".$row2["opciones"]."\t\n";
+	$nacim = "";
+	if ($row2["fnacimiento"] !== "9999-09-09") {
+		$nacim = $row2["fnacimiento"];
+	}
+          $attachment  .= utf8_encode($row2["nombre"])."\t".$row2["apellido"]."\t".$row2["telefono"]."\t".$row2["email"]."\t".$row2["direccion"]."\t".$dominio."\t".$row2["fecha"]."\t".$nacim."\t".$row2["opciones"]."\t\n";
       } 
     }else{
       $attachment2  = '';
@@ -46,12 +50,17 @@ if ($result->num_rows > 0) {
       $result3 = $conn->query($sql3);
       $dominio = $conn->query("SELECT dominio FROM landing WHERE id = ".$row["idLanding"])->fetch_object()->dominio;
       while($row3 = $result3->fetch_assoc()) {
+	  $nacim2 = "";
+      	  if ($row3["fnacimiento"] !== "9999-09-09") {
+                $nacim2 = $row3["fnacimiento"];
+          }
           $rNl = $conn->query($sqlNl);
-          $attachment2  .= $row3["nombre"]."\t".$row3["apellido"]."\t".$row3["telefono"]."\t".$row3["email"]."\t".$row3["direccion"]."\t".$dominio."\t".$row3["fecha"]."\t".$row3["fnacimiento"]."\t".$row3["opciones"]."\t\n";
+          $attachment2  .= $row3["nombre"]."\t".$row3["apellido"]."\t".$row3["telefono"]."\t".$row3["email"]."\t".$row3["direccion"]."\t".$dominio."\t".$row3["fecha"]."\t".$nacim2."\t".$row3["opciones"]."\t\n";
       }
       if($attachment2  !== ''){
         $mail = new PHPMailer\PHPMailer\PHPMailer();
-        $mail->IsSMTP(); // enable SMTP
+        $mail->CharSet = "utf-8";
+	$mail->IsSMTP(); // enable SMTP
         $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
         $mail->SMTPAuth = true; // authentication enabled
         $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
@@ -82,6 +91,7 @@ if ($result->num_rows > 0) {
 $conn->close();
 if($attachment  !== ''){
   $mail = new PHPMailer\PHPMailer\PHPMailer();
+  $mail->CharSet = "utf-8";
   $mail->IsSMTP(); // enable SMTP
   $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
   $mail->SMTPAuth = true; // authentication enabled
