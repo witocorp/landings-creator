@@ -99,7 +99,7 @@ class LandingController extends Controller
 			$model->save();
 			//xavi
 			header('Refresh: 120; URL=https://landingfy-creator.com/');
-            echo "<p style='text-align:center;'>Seras redirigido a la web en 2 minutos, mientras el servidor realiza los cambios</p>"
+            echo "<p style='text-align:center;'>Seras redirigido a la web en 2 minutos, mientras el servidor realiza los cambios</p>";
             shell_exec($_SERVER['DOCUMENT_ROOT']."/backend/controllers/create_vhost.sh '".$model->dominio."'");
             die();
 			//return $this->redirect(['index']);
