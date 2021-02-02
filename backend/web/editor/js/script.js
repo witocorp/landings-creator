@@ -29,19 +29,6 @@ var editor = new Array();
     })
   );
   editor.push(
-    new FroalaEditor("#editCt", {
-      toolbarButtons: [
-        "bold",
-        "italic",
-        "underline",
-        "insertLink",
-        "insertImage",
-        "html",
-      ],
-      imageInsertButtons: ["imageByURL"],
-    })
-  );
-  editor.push(
     new FroalaEditor("#myCarousel", {
       toolbarButtons: [
         "bold",
