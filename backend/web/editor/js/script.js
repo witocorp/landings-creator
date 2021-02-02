@@ -554,6 +554,11 @@ $(document).ready(function () {
       editor.push(
         new FroalaEditor("#edit" + contador, {
           toolbarButtons: [
+            "bold",
+            "italic",
+            "underline",
+            "insertLink",
+            "insertImage",
             "html",
           ],
           imageInsertButtons: ["imageByURL"],
