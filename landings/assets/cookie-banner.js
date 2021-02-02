@@ -34,6 +34,9 @@ function initializeCookieBanner(){
     if(isCookieAccepted === "no"){
         showCookieBanner();
     }
+    if(isCookieAccepted === "yes"){
+        hideCookieBanner();
+    }
 }
 
 // Assigning values to window object

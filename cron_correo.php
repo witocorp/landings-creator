@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 }
 $attachment  = '';
 $attachment2  = '';
-$attachmentH = utf8_encode("Prénom\tNom\tTéléphone\tEmail\tAdresse\tDomaine\tDate dexpédition\tDate de naissance\tOptions\t\n");
+$attachmentH = utf8_decode("Prénom\tNom\tTéléphone\tEmail\tAdresse\tDomaine\tDate dexpédition\tDate de naissance\tOptions\t\n");
 $sql = "SELECT * FROM email";
 $result = $conn->query($sql);
 $emailAdmin = "";
@@ -39,7 +39,7 @@ if ($result->num_rows > 0) {
 	if ($row2["fnacimiento"] !== "9999-09-09") {
 		$nacim = $row2["fnacimiento"];
 	}
-          $attachment  .= utf8_encode($row2["nombre"])."\t".$row2["apellido"]."\t".$row2["telefono"]."\t".$row2["email"]."\t".$row2["direccion"]."\t".$dominio."\t".$row2["fecha"]."\t".$nacim."\t".$row2["opciones"]."\t\n";
+          $attachment  .= $row2["nombre"]."\t".$row2["apellido"]."\t".$row2["telefono"]."\t".$row2["email"]."\t".$row2["direccion"]."\t".$dominio."\t".$row2["fecha"]."\t".$nacim."\t".$row2["opciones"]."\t\n";
       } 
     }else{
       $attachment2  = '';
@@ -59,7 +59,7 @@ if ($result->num_rows > 0) {
       }
       if($attachment2  !== ''){
         $mail = new PHPMailer\PHPMailer\PHPMailer();
-        $mail->CharSet = "utf-8";
+        $mail->CharSet = "UTF-8";
 	$mail->IsSMTP(); // enable SMTP
         $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
         $mail->SMTPAuth = true; // authentication enabled
@@ -70,7 +70,7 @@ if ($result->num_rows > 0) {
         $mail->Username = "fantasticfy@gmail.com";
         $mail->Password = "46Wito74.";
         $mail->SetFrom("noreply@landingfy-creator.com");
-        $mail->AddStringAttachment($attachmentH. "" .$attachment2, 'landing_emails.xls', 'base64', 'application/vnd.ms-excel');
+        $mail->AddStringAttachment($attachmentH. "" .$attachment2, 'landing_emails.xls', 'base64', 'application/vnd.ms-excel; charset=utf-8');
         $mail->Subject = "Emails list: " .$dominio;
         $mail->Body = "Emails list";
         $mail->AddAddress($emailL);
@@ -91,7 +91,7 @@ if ($result->num_rows > 0) {
 $conn->close();
 if($attachment  !== ''){
   $mail = new PHPMailer\PHPMailer\PHPMailer();
-  $mail->CharSet = "utf-8";
+  $mail->CharSet = "UTF-8";
   $mail->IsSMTP(); // enable SMTP
   $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
   $mail->SMTPAuth = true; // authentication enabled
@@ -102,7 +102,7 @@ if($attachment  !== ''){
   $mail->Username = "fantasticfy@gmail.com";
   $mail->Password = "46Wito74.";
   $mail->SetFrom("noreply@landingfy-creator.com");
-  $mail->AddStringAttachment($attachmentH. "" .$attachment, 'emails_list.xls', 'base64', 'application/vnd.ms-excel');
+  $mail->AddStringAttachment($attachmentH. "" .$attachment, 'emails_list.xls', 'base64', 'application/vnd.ms-excel; charset=utf-8');
   $mail->Subject = "Emails list";
   $mail->Body = "Emails list";
   $mail->AddAddress($emailAdmin);

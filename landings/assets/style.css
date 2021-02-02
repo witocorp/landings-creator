@@ -56,13 +56,17 @@
 	padding-top: 1rem !important;
 	padding-bottom: 1rem !important;		
 }
-#editF, #anexos
+#editF, #editCt, #anexos
 {
   padding: 5px 20px;
 }
 @media screen and (max-width: 992px) {
   .navbar-nav li{
     text-align: center;
+  }
+  #anexos .py-5 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
   }
   .navbar-nav a::after { 
     content: "\a"; white-space: pre;

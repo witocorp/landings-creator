@@ -14,6 +14,9 @@ $(document).ready(function(){
               $(this).css({"color": color,"border-color": color, "background-color": "initial"})
            }
         );
+        if($('#navbarTogglerDemo02 ul li a').length <= 1) {
+             $('.navbar-toggler').hide();
+        }
 	$('footer a, .nk-cookie-banner a').on('click', function(){
 			event.preventDefault();
 			$($(this).attr("href")).modal('show');
