@@ -86,7 +86,7 @@ $(document).ready(function(){
 		      	$('#direccion_form').val('');
 		      	$("#nacimiento_form").val('');
 		      	$("#polPri").prop('checked', false);
-		      	$('<div class="alert alert-success alert-dismissible fade show" role="alert"> E-mail envoyé avec succès.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>').insertAfter( "#enviar_form" );
+		      	$('<div class="alert alert-success alert-dismissible fade show mt-3" role="alert"> E-mail envoyé avec succès.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>').insertAfter( "#enviar_form" );
 		      }
 		    });
 		}
