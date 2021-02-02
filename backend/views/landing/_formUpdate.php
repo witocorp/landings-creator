@@ -197,6 +197,13 @@ $this->registerJsFile("@web/editor/js/script_update.js", ['depends' => 'yii\web\
             />
           </div>
            <h5 class="text-left my-md-3 text-center">Contacto</h5>
+          <div class="text-left my-md-3">
+            <img
+              src="img/contacto.png"
+              id="cn8"
+              style="border: 1px solid; cursor: pointer" class="img-responsive"
+            />
+          </div>
           <h5 class="text-left my-md-3">Title options</h5>
           <div class="text-left my-md-3">
             <input type="text" id="titleOptions" class="form-control" placeholder="Title">
