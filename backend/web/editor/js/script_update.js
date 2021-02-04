@@ -129,7 +129,8 @@ var editor = new Array();
   contador++;
 })();
 $(document).ready(function () {
-   $(".shopify-buy-frame iframe").remove();  
+   //$(".shopify-buy-frame iframe").remove();
+   $(".shopify-buy-frame").empty();
    $(function () {
     $(".column").sortable({
       connectWith: ".column",
