@@ -109,6 +109,10 @@ $this->registerJsFile("@web/editor/js/script_update.js", ['depends' => 'yii\web\
     <?= $form->field($model, 'codigo')->hiddenInput()->label(false); ?>
 	
 	<h3><i class="fa fa-code" aria-hidden="true"></i> Landing</h3>
+  <div class="alert alert-warning mt-5" role="alert">
+    <p class="text-center">El script de shopify carga un iframe al inicializar la página. Para evitar un duplicado de productos presionar el siguiente botón.
+  </p>
+<button type="button" class="btn btn-secondary centrado mt-3" id="borrar_duplicados">Borrar duplicados</button></div>
 	 <div class="row">
       <div class="col-md-2 left_dis">
         <div class="sticky-top">

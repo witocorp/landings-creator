@@ -616,6 +616,9 @@ $(document).ready(function () {
       $('#newValue').removeClass('border-danger');
     }
   });
+  $(document).on("click", "#borrar_duplicados", function () {
+    $(".shopify-buy-frame").empty();  
+  });
   $(document).on("click", ".menu_link", function () {
     var $tempElement = $("<input>");
     $("body").append($tempElement);
