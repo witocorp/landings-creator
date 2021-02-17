@@ -3,6 +3,15 @@ function validateEmail($email) {
   return emailReg.test( $email );
 }
 $(document).ready(function(){
+	var langP = 0;
+	if($('#polPri').is(':checked')){
+		langP = 1;
+	}
+	if(langP === 1){
+		console.log("aleman");
+	}else{
+		console.log("frances");
+	}
 	var color = $("body").data("color");
 	$('.nk-cookie-banner').css({"background-color": color, "border-color": color});
 	$('.banner_head').css({"background-color": color});
