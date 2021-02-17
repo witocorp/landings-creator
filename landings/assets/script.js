@@ -7,11 +7,6 @@ $(document).ready(function(){
 	if($('#polPri').is(':checked')){
 		langP = 1;
 	}
-	if(langP === 1){
-		console.log("aleman");
-	}else{
-		console.log("frances");
-	}
 	var color = $("body").data("color");
 	$('.nk-cookie-banner').css({"background-color": color, "border-color": color});
 	$('.banner_head').css({"background-color": color});
@@ -95,7 +90,11 @@ $(document).ready(function(){
 		      	$('#direccion_form').val('');
 		      	$("#nacimiento_form").val('');
 		      	$("#polPri").prop('checked', false);
-		      	$('<div class="alert alert-success alert-dismissible fade show mt-3" role="alert"> E-mail envoyé avec succès.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>').insertAfter( "#enviar_form" );
+		      	if(langP === 1){
+					$('<div class="alert alert-success alert-dismissible fade show mt-3" role="alert"> E-Mail wurde erfolgreich Versendet.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>').insertAfter( "#enviar_form" );
+				}else{
+					$('<div class="alert alert-success alert-dismissible fade show mt-3" role="alert"> E-mail envoyé avec succès.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>').insertAfter( "#enviar_form" );
+				}		      	
 		      }
 		    });
 		}
