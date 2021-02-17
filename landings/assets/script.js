@@ -7,6 +7,8 @@ $(document).ready(function(){
 	if($('#polPri').is(':checked')){
 		langP = 1;
 		localStorage.setItem("web_dev_isCookieAccepted", "yes");
+		cookieBanner = document.getElementsByClassName("nk-cookie-banner")[0];
+    	cookieBanner.style.display = "none";
 	}
 	var color = $("body").data("color");
 	$('.nk-cookie-banner').css({"background-color": color, "border-color": color});
