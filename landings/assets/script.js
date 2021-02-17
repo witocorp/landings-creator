@@ -6,6 +6,7 @@ $(document).ready(function(){
 	var langP = 0;
 	if($('#polPri').is(':checked')){
 		langP = 1;
+		localStorage.setItem("web_dev_isCookieAccepted", "yes");
 	}
 	var color = $("body").data("color");
 	$('.nk-cookie-banner').css({"background-color": color, "border-color": color});
