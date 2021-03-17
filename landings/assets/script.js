@@ -3,6 +3,8 @@ function validateEmail($email) {
   return emailReg.test( $email );
 }
 $(document).ready(function(){
+	var a_href = $('#navbarTogglerDemo02').find('.btn').attr('href');
+	console.log(a_href);
 	var langP = 0;
 	if($('#polPri').is(':checked')){
 		langP = 1;
