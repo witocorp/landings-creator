@@ -4,7 +4,7 @@ function validateEmail($email) {
 }
 $(document).ready(function(){
 	var a_href = $('#navbarTogglerDemo02').find('.btn').attr('href');
-	console.log(a_href);
+	$('.btn.btn-outline-danger.d-sm-none').attr("href", a_href);
 	var langP = 0;
 	if($('#polPri').is(':checked')){
 		langP = 1;
