@@ -110,6 +110,7 @@ $this->title = $nombre;
       'telefono',
       'email:email',
       'direccion',
+      'ciudad',
       //'idLanding',
       'fecha',
        [
