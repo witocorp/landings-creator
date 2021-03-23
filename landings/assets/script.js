@@ -7,8 +7,8 @@ $(document).ready(function(){
 	var a_text = $('#navbarTogglerDemo02').find('.btn').text();
 	$('.btn.btn-outline-danger.d-sm-none').attr("href", a_href);
 	$('.btn.btn-outline-danger.d-sm-none').text(a_text);
-	var langP = 0;
-	if($('#polPri').is(':checked')){
+	var langP = $("body").data("lan");
+	if($('#polPri').length){
 		langP = 1;
 		localStorage.setItem("web_dev_isCookieAccepted", "yes");
 		cookieBanner = document.getElementsByClassName("nk-cookie-banner")[0];
@@ -107,7 +107,7 @@ $(document).ready(function(){
 		      	$('#cp_form').val('');
 		      	$("#nacimiento_form").val('');
 		      	$("#polPri").prop('checked', false);
-		      	if(langP === 1){
+		      	if(langP === "al"){
 					$('<div class="alert alert-success alert-dismissible fade show mt-3" role="alert"> E-Mail wurde erfolgreich Versendet.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>').insertAfter( "#enviar_form" );
 				}else{
 					$('<div class="alert alert-success alert-dismissible fade show mt-3" role="alert"> E-mail envoyé avec succès.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>').insertAfter( "#enviar_form" );
