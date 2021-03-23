@@ -18,6 +18,7 @@ use Yii;
  * @property string $fnacimiento
  * @property string $opciones
  * @property string $ciudad
+ * @property string $codp
  */
 class Emails extends \yii\db\ActiveRecord
 {
@@ -35,11 +36,12 @@ class Emails extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nombre', 'apellido', 'telefono', 'email', 'direccion', 'idLanding', 'fecha', 'ciudad'], 'required'],
+            [['nombre', 'apellido', 'telefono', 'email', 'direccion', 'idLanding', 'fecha', 'ciudad', 'codp'], 'required'],
             [['idLanding'], 'integer'],
             [['fecha', 'fnacimiento'], 'safe'],
             [['nombre', 'apellido', 'email', 'direccion', 'opciones'], 'string', 'max' => 500],
             [['telefono', 'ciudad'], 'string', 'max' => 100],
+            [['codp'], 'string', 'max' => 20],
         ];
     }
 
@@ -60,6 +62,7 @@ class Emails extends \yii\db\ActiveRecord
             'fnacimiento' => 'Fecha Nacimiento',
             'opciones' => 'Opciones',
             'ciudad' => 'Ciudad',
+            'codp' => 'Codigo Postal',
         ];
     }
 }

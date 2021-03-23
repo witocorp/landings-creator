@@ -18,7 +18,7 @@ class EmailsSearch extends Emails
     {
         return [
             [['id', 'idLanding'], 'integer'],
-            [['nombre', 'apellido', 'telefono', 'email', 'direccion', 'fecha', 'fnacimiento', 'opciones', 'ciudad'], 'safe'],
+            [['nombre', 'apellido', 'telefono', 'email', 'direccion', 'fecha', 'fnacimiento', 'opciones', 'ciudad', 'codp'], 'safe'],
         ];
     }
 
@@ -70,7 +70,8 @@ class EmailsSearch extends Emails
             ->andFilterWhere(['like', 'email', $this->email])
             ->andFilterWhere(['like', 'direccion', $this->direccion])
             ->andFilterWhere(['like', 'opciones', $this->opciones])
-            ->andFilterWhere(['like', 'ciudad', $this->ciudad]);
+            ->andFilterWhere(['like', 'ciudad', $this->ciudad])
+            ->andFilterWhere(['like', 'codp', $this->codp]);
 
         return $dataProvider;
     }
