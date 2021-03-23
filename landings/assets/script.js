@@ -51,7 +51,7 @@ $(document).ready(function(){
 		}else{
 			$('#apellido_form').removeClass('border-danger');
 		}
-		if($('#polPri')){
+		if($('#polPri').length){
 			console.log("politica privacidad");
 			if($('#polPri').is(':checked')){
 				$('#polPri').removeClass('border-danger');
