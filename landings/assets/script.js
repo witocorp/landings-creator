@@ -33,7 +33,7 @@ $(document).ready(function(){
 			$($(this).attr("href")).modal('show');
 	});
 	$('#enviar_form').on('click', function(){
-
+		console.log(langP);
 		var flag = 0;
 		var options = "";	
 		$("input[type=radio]:checked").each(function() {
@@ -52,7 +52,6 @@ $(document).ready(function(){
 			$('#apellido_form').removeClass('border-danger');
 		}
 		if($('#polPri').length){
-			console.log("politica privacidad");
 			if($('#polPri').is(':checked')){
 				$('#polPri').removeClass('border-danger');
 			}else{
@@ -78,9 +77,7 @@ $(document).ready(function(){
 		}else{
 			$('#ciudad_form').removeClass('border-danger');
 		}
-		console.log("entro");
 		if(flag === 0){
-			console.log("Enviando");
 			$.ajax({
 		      url: '../assets/emails.php',
 		      type: 'POST',
