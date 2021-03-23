@@ -77,6 +77,7 @@ $(document).ready(function(){
 		}else{
 			$('#ciudad_form').removeClass('border-danger');
 		}
+		console.log("entro");
 		if(flag === 0){
 			$.ajax({
 		      url: '../assets/emails.php',
