@@ -8,7 +8,7 @@ $(document).ready(function(){
 	$('.btn.btn-outline-danger.d-sm-none').attr("href", a_href);
 	$('.btn.btn-outline-danger.d-sm-none').text(a_text);
 	var langP = $("#enviar_form").data("lan");
-	if($('#polPri').length){
+	if(!$('#polPri').length){
 		langP = 1;
 		localStorage.setItem("web_dev_isCookieAccepted", "yes");
 		cookieBanner = document.getElementsByClassName("nk-cookie-banner")[0];
