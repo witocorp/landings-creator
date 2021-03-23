@@ -33,6 +33,7 @@ $(document).ready(function(){
 			$($(this).attr("href")).modal('show');
 	});
 	$('#enviar_form').on('click', function(){
+
 		var flag = 0;
 		var options = "";	
 		$("input[type=radio]:checked").each(function() {
@@ -50,29 +51,25 @@ $(document).ready(function(){
 		}else{
 			$('#apellido_form').removeClass('border-danger');
 		}
-		if($('#polPri').is(':checked')){
-			$('#polPri').removeClass('border-danger');
-		}else{
-			$('#polPri').addClass('border-danger');
-			flag = 1;
-		}
-		if(!$('#telefono_form').val()){
-			$('#telefono_form').addClass('border-danger');
-			flag = 1;
-		}else{
-			$('#telefono_form').removeClass('border-danger');
-		}
-		if(!$('#email_form').val() || !validateEmail($('#email_form').val())){
-			$('#email_form').addClass('border-danger');
-			flag = 1;
-		}else{
-			$('#email_form').removeClass('border-danger');
+		if($('#polPri')){
+			if($('#polPri').is(':checked')){
+				$('#polPri').removeClass('border-danger');
+			}else{
+				$('#polPri').addClass('border-danger');
+				flag = 1;
+			}
 		}
 		if(!$('#direccion_form').val()){
 			$('#direccion_form').addClass('border-danger');
 			flag = 1;
 		}else{
 			$('#direccion_form').removeClass('border-danger');
+		}
+		if(!$('#cp_form').val()){
+			$('#cp_form').addClass('border-danger');
+			flag = 1;
+		}else{
+			$('#cp_form').removeClass('border-danger');
 		}
 		if(!$('#ciudad_form').val()){
 			$('#ciudad_form').addClass('border-danger');
@@ -90,7 +87,8 @@ $(document).ready(function(){
 		      	telefono : $('#telefono_form').val(), 
 		      	email : $('#email_form').val(), 
 		      	direccion : $('#direccion_form').val(),
-		      	ciudad : $('#ciudad_form').val(), 
+		      	ciudad : $('#ciudad_form').val(),
+		      	codP : $('#cp_form').val(), 
 		      	idLanding: $("body").data("idLanding"),
 		      	//fnacimiento: $("#nacimiento_form").val(),
 		      	opciones : options
@@ -103,6 +101,7 @@ $(document).ready(function(){
 		      	$('#email_form').val(''); 
 		      	$('#direccion_form').val('');
 		      	$('#ciudad_form').val('');
+		      	$('#cp_form').val('');
 		      	$("#nacimiento_form").val('');
 		      	$("#polPri").prop('checked', false);
 		      	if(langP === 1){
