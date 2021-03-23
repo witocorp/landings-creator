@@ -111,6 +111,7 @@ $this->title = $nombre;
       'email:email',
       'direccion',
       'ciudad',
+      'codp',
       //'idLanding',
       'fecha',
        [
