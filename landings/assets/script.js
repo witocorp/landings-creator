@@ -7,7 +7,7 @@ $(document).ready(function(){
 	var a_text = $('#navbarTogglerDemo02').find('.btn').text();
 	$('.btn.btn-outline-danger.d-sm-none').attr("href", a_href);
 	$('.btn.btn-outline-danger.d-sm-none').text(a_text);
-	var langP = $("body").data("lan");
+	var langP = $("#enviar_form").data("lan");
 	if($('#polPri').length){
 		langP = 1;
 		localStorage.setItem("web_dev_isCookieAccepted", "yes");
