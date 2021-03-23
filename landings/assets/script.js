@@ -79,6 +79,7 @@ $(document).ready(function(){
 		}
 		console.log("entro");
 		if(flag === 0){
+			console.log("Enviando");
 			$.ajax({
 		      url: '../assets/emails.php',
 		      type: 'POST',
