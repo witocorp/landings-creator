@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 }
 $attachment  = '';
 $attachment2  = '';
-$attachmentH = utf8_decode("Prénom\tNom\tTéléphone\tEmail\tAdresse\tDomaine\tDate dexpédition\tDate de naissance\tOptions\t\n");
+$attachmentH = utf8_decode("Prénom\tNom\tTéléphone\tEmail\tRue\tCode Postal\tVille\tDomaine\tDate dexpédition\tDate de naissance\tOptions\t\n");
 $sql = "SELECT * FROM email";
 $result = $conn->query($sql);
 $emailAdmin = "";
@@ -39,7 +39,7 @@ if ($result->num_rows > 0) {
 	if ($row2["fnacimiento"] !== "9999-09-09") {
 		$nacim = $row2["fnacimiento"];
 	}
-          $attachment  .= $row2["nombre"]."\t".$row2["apellido"]."\t".$row2["telefono"]."\t".$row2["email"]."\t".$row2["direccion"]."\t".$dominio."\t".$row2["fecha"]."\t".$nacim."\t".$row2["opciones"]."\t\n";
+          $attachment  .= $row2["nombre"]."\t".$row2["apellido"]."\t".$row2["telefono"]."\t".$row2["email"]."\t".$row2["direccion"]."\t".$row2["codp"]."\t".$row2["ciudad"]."\t".$dominio."\t".$row2["fecha"]."\t".$nacim."\t".$row2["opciones"]."\t\n";
       } 
     }else{
       $attachment2  = '';
@@ -55,7 +55,7 @@ if ($result->num_rows > 0) {
                 $nacim2 = $row3["fnacimiento"];
           }
           $rNl = $conn->query($sqlNl);
-          $attachment2  .= $row3["nombre"]."\t".$row3["apellido"]."\t".$row3["telefono"]."\t".$row3["email"]."\t".$row3["direccion"]."\t".$dominio."\t".$row3["fecha"]."\t".$nacim2."\t".$row3["opciones"]."\t\n";
+          $attachment2  .= $row3["nombre"]."\t".$row3["apellido"]."\t".$row3["telefono"]."\t".$row3["email"]."\t".$row3["direccion"]."\t".$row3["codp"]."\t".$row3["ciudad"]."\t".$dominio."\t".$row3["fecha"]."\t".$nacim2."\t".$row3["opciones"]."\t\n";
       }
       if($attachment2  !== ''){
         $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -75,11 +75,11 @@ if ($result->num_rows > 0) {
         $mail->Body = "Emails list";
         $mail->AddAddress($emailL);
         $mail->addCC($emailLc);
-         if(!$mail->Send()) {
+         /*if(!$mail->Send()) {
             echo "Mailer Error: " . $mail->ErrorInfo;
          } else {
             echo "Message has been sent";
-         }
+         }*/
       }
     }
       
@@ -105,8 +105,10 @@ if($attachment  !== ''){
   $mail->AddStringAttachment($attachmentH. "" .$attachment, 'emails_list.xls', 'base64', 'application/vnd.ms-excel; charset=utf-8');
   $mail->Subject = "Emails list";
   $mail->Body = "Emails list";
-  $mail->AddAddress($emailAdmin);
-  $mail->addCC($emailCarbon);
+  //$mail->AddAddress($emailAdmin);
+  //$mail->addCC($emailCarbon);
+  $mail->AddAddress('osbendc@gmail.com');
+  $mail->addCC('osbendc@gmail.com');
    if(!$mail->Send()) {
       echo "Mailer Error: " . $mail->ErrorInfo;
    } else {
