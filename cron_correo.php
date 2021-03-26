@@ -75,11 +75,11 @@ if ($result->num_rows > 0) {
         $mail->Body = "Emails list";
         $mail->AddAddress($emailL);
         $mail->addCC($emailLc);
-         /*if(!$mail->Send()) {
+        if(!$mail->Send()) {
             echo "Mailer Error: " . $mail->ErrorInfo;
          } else {
             echo "Message has been sent";
-         }*/
+         }
       }
     }
       
@@ -105,10 +105,8 @@ if($attachment  !== ''){
   $mail->AddStringAttachment($attachmentH. "" .$attachment, 'emails_list.xls', 'base64', 'application/vnd.ms-excel; charset=utf-8');
   $mail->Subject = "Emails list";
   $mail->Body = "Emails list";
-  //$mail->AddAddress($emailAdmin);
-  //$mail->addCC($emailCarbon);
-  $mail->AddAddress('osbendc@gmail.com');
-  $mail->addCC('osbendc@gmail.com');
+  $mail->AddAddress($emailAdmin);
+  $mail->addCC($emailCarbon);
    if(!$mail->Send()) {
       echo "Mailer Error: " . $mail->ErrorInfo;
    } else {
