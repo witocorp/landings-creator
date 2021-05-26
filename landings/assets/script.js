@@ -9,7 +9,7 @@ $(document).ready(function(){
 	$('.btn.btn-outline-danger.d-sm-none').text(a_text);
 	var langP = $("#enviar_form").data("lan");
 	if(!$('#polPri').length){
-		langP = "al";
+		//langP = "al";
 		localStorage.setItem("web_dev_isCookieAccepted", "yes");
 		cookieBanner = document.getElementsByClassName("nk-cookie-banner")[0];
     	cookieBanner.style.display = "none";
